@@ -44,9 +44,9 @@
             this.Manv = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lsvNhanVien = new System.Windows.Forms.ListView();
+            this.clmMaNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clmMasp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmNgaysinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmNgayvao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmDienthoai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -202,7 +202,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listView1);
+            this.groupBox2.Controls.Add(this.lsvNhanVien);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(29, 247);
             this.groupBox2.Name = "groupBox2";
@@ -211,34 +211,34 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Sản Phẩm";
             // 
-            // listView1
+            // lsvNhanVien
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsvNhanVien.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmMaNV,
             this.clmTen,
-            this.clmMasp,
             this.clmNgaysinh,
             this.clmNgayvao,
             this.clmDienthoai,
             this.clmGioitinh,
             this.clmDiachi});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(22, 21);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(718, 187);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lsvNhanVien.FullRowSelect = true;
+            this.lsvNhanVien.GridLines = true;
+            this.lsvNhanVien.Location = new System.Drawing.Point(22, 21);
+            this.lsvNhanVien.Name = "lsvNhanVien";
+            this.lsvNhanVien.Size = new System.Drawing.Size(718, 187);
+            this.lsvNhanVien.TabIndex = 0;
+            this.lsvNhanVien.UseCompatibleStateImageBehavior = false;
+            this.lsvNhanVien.View = System.Windows.Forms.View.Details;
+            // 
+            // clmMaNV
+            // 
+            this.clmMaNV.Text = "Mã NV";
+            this.clmMaNV.Width = 80;
             // 
             // clmTen
             // 
             this.clmTen.Text = "Họ Tên";
             this.clmTen.Width = 100;
-            // 
-            // clmMasp
-            // 
-            this.clmMasp.Text = "Mã NV";
-            this.clmMasp.Width = 80;
             // 
             // clmNgaysinh
             // 
@@ -352,9 +352,9 @@
         private System.Windows.Forms.Label Manv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lsvNhanVien;
         private System.Windows.Forms.ColumnHeader clmTen;
-        private System.Windows.Forms.ColumnHeader clmMasp;
+        private System.Windows.Forms.ColumnHeader clmMaNV;
         private System.Windows.Forms.ColumnHeader clmNgaysinh;
         private System.Windows.Forms.ColumnHeader clmNgayvao;
         private System.Windows.Forms.ColumnHeader clmDienthoai;

@@ -18,14 +18,14 @@ namespace PhanMemQuanLyDoanThu
         }
         public DataTable LayDSNhanvien()
         {
-            string strSQL = "Select Manhanvien, HoTenNhanVien, Ngaysinh,Diachi,Dienthoai, TenBangcap From Nhanvien N, BANGCAP B Where N.MaBangCap=B.MaBangCap";
+            string strSQL = "Select MANV, TENNV, TENCHUCVU,TENBOPHAN,NGAYSINH,NGAYVAOLAM,DIENTHOAI,GIOITINH,DIACHI From NHANVIEN A, CHUCVU B, BOPHAN C, BANGCAP B Where A.MACHUCVU=B.MACHUCVU AND A.MABOPHAN=C.MABOPHAN";
             DataTable dt = db.Execute(strSQL);
             //Goi phuong thuc truy xuat du lieu 
             return dt;
         }
         public void ThemNhanVien(string tennv, string tendn, string matkhau)
         {
-            string strSQL = string.Format("Insert Into NHANVIEN  Values(N'{0}',NULL,NULL,'{1}','{2}')",tennv,tendn,matkhau);
+            string strSQL = string.Format("Insert Into NHANVIEN  Values(N'{0}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'{1}','{2}')",tennv,tendn,matkhau);
             db.ExecuteNonQuery(strSQL);
         }
         
