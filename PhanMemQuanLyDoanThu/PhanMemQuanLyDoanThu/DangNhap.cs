@@ -15,7 +15,7 @@ namespace PhanMemQuanLyDoanThu
 {
     public partial class DangNhap : DevExpress.XtraEditors.XtraForm
     {
-        public String conString = @"Data Source=TP500LA;Initial Catalog=QUANLYDOANHTHU;Integrated Security=True";
+        public String conString = @"Data Source=TP500LA;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
         NhanVien nv = new NhanVien();
         public DangNhap()
         {
@@ -55,7 +55,10 @@ namespace PhanMemQuanLyDoanThu
                 cmd.Parameters.AddWithValue("@pass", txtMatkhau.Text);
                 int result = (int)cmd.ExecuteScalar();
                 if (result > 0)
+                {
                     MessageBox.Show("Đăng nhập thành công");
+                    Close();
+                }
                 else
                     MessageBox.Show("Đăng nhập thất bại");
             }

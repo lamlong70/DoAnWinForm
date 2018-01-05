@@ -15,7 +15,7 @@ namespace PhanMemQuanLyDoanThu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
         public Database()
         {
-            string strCnn = "Data Source=TP500LA; Database=QUANLYDOANHTHU;Integrated Security = True";
+            string strCnn = "Data Source=TP500LA; Database=QUANLYDOANHTHUDA;Integrated Security = True";
             sqlConn = new SqlConnection(strCnn);
         }
         //Phuong thuc de thuc hien cau lenh strSQL truy vân du lieu

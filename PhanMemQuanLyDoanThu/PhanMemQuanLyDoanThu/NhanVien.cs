@@ -25,7 +25,7 @@ namespace PhanMemQuanLyDoanThu
         }
         public void ThemNhanVien(string tennv, string tendn, string matkhau)
         {
-            string strSQL = string.Format( "Insert Into NHANVIEN  Values(N'{0}','{1}','{2}')",tennv,tendn,matkhau);
+            string strSQL = string.Format("Insert Into NHANVIEN  Values(N'{0}',NULL,NULL,'{1}','{2}')",tennv,tendn,matkhau);
             db.ExecuteNonQuery(strSQL);
         }
         
