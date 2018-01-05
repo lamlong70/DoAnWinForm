@@ -33,8 +33,11 @@
             this.cmbGioitinh = new System.Windows.Forms.ComboBox();
             this.cmbNgayvaolam = new System.Windows.Forms.ComboBox();
             this.txtDienThoai = new System.Windows.Forms.TextBox();
+            this.txtDiachi = new System.Windows.Forms.TextBox();
+            this.txtManv = new System.Windows.Forms.TextBox();
             this.txtHoten = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,15 +51,12 @@
             this.clmNgayvao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmDienthoai = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmGioitinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmDiachi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
-            this.txtDiachi = new System.Windows.Forms.TextBox();
-            this.txtManv = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.clmDiachi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -116,6 +116,20 @@
             this.txtDienThoai.Size = new System.Drawing.Size(237, 23);
             this.txtDienThoai.TabIndex = 1;
             // 
+            // txtDiachi
+            // 
+            this.txtDiachi.Location = new System.Drawing.Point(440, 113);
+            this.txtDiachi.Name = "txtDiachi";
+            this.txtDiachi.Size = new System.Drawing.Size(237, 23);
+            this.txtDiachi.TabIndex = 1;
+            // 
+            // txtManv
+            // 
+            this.txtManv.Location = new System.Drawing.Point(142, 70);
+            this.txtManv.Name = "txtManv";
+            this.txtManv.Size = new System.Drawing.Size(157, 23);
+            this.txtManv.TabIndex = 1;
+            // 
             // txtHoten
             // 
             this.txtHoten.Location = new System.Drawing.Point(142, 23);
@@ -131,6 +145,15 @@
             this.label4.Size = new System.Drawing.Size(99, 16);
             this.label4.TabIndex = 0;
             this.label4.Text = "Ngày Vào Làm";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(323, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Địa Chỉ";
             // 
             // label7
             // 
@@ -237,6 +260,11 @@
             this.clmGioitinh.Text = "Giới Tính";
             this.clmGioitinh.Width = 70;
             // 
+            // clmDiachi
+            // 
+            this.clmDiachi.Text = "Địa Chỉ";
+            this.clmDiachi.Width = 150;
+            // 
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -280,40 +308,12 @@
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(732, 218);
+            this.btnHuy.Location = new System.Drawing.Point(732, 205);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 23);
+            this.btnHuy.Size = new System.Drawing.Size(75, 36);
             this.btnHuy.TabIndex = 8;
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
-            // 
-            // txtDiachi
-            // 
-            this.txtDiachi.Location = new System.Drawing.Point(440, 113);
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(237, 23);
-            this.txtDiachi.TabIndex = 1;
-            // 
-            // txtManv
-            // 
-            this.txtManv.Location = new System.Drawing.Point(142, 70);
-            this.txtManv.Name = "txtManv";
-            this.txtManv.Size = new System.Drawing.Size(157, 23);
-            this.txtManv.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(323, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Địa Chỉ";
-            // 
-            // clmDiachi
-            // 
-            this.clmDiachi.Text = "Địa Chỉ";
-            this.clmDiachi.Width = 150;
             // 
             // FormNhanvien
             // 
