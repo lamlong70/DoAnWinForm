@@ -98,6 +98,7 @@
             this.cboChucVu.Name = "cboChucVu";
             this.cboChucVu.Size = new System.Drawing.Size(157, 24);
             this.cboChucVu.TabIndex = 8;
+            this.cboChucVu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboChucVu_KeyPress);
             // 
             // cboBoPhan
             // 
@@ -106,6 +107,7 @@
             this.cboBoPhan.Name = "cboBoPhan";
             this.cboBoPhan.Size = new System.Drawing.Size(157, 24);
             this.cboBoPhan.TabIndex = 7;
+            this.cboBoPhan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboBoPhan_KeyPress);
             // 
             // label8
             // 
@@ -130,35 +132,36 @@
             this.dtpNgaySinh.Location = new System.Drawing.Point(157, 116);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(200, 23);
-            this.dtpNgaySinh.TabIndex = 4;
+            this.dtpNgaySinh.TabIndex = 3;
             // 
             // dtpNgayLam
             // 
             this.dtpNgayLam.Location = new System.Drawing.Point(157, 157);
             this.dtpNgayLam.Name = "dtpNgayLam";
             this.dtpNgayLam.Size = new System.Drawing.Size(200, 23);
-            this.dtpNgayLam.TabIndex = 3;
+            this.dtpNgayLam.TabIndex = 4;
             // 
             // cmbGioitinh
             // 
             this.cmbGioitinh.Location = new System.Drawing.Point(466, 73);
             this.cmbGioitinh.Name = "cmbGioitinh";
             this.cmbGioitinh.Size = new System.Drawing.Size(157, 24);
-            this.cmbGioitinh.TabIndex = 2;
+            this.cmbGioitinh.TabIndex = 6;
+            this.cmbGioitinh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbGioitinh_KeyPress);
             // 
             // txtDienThoai
             // 
             this.txtDienThoai.Location = new System.Drawing.Point(466, 26);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(157, 23);
-            this.txtDienThoai.TabIndex = 1;
+            this.txtDienThoai.TabIndex = 5;
             // 
             // txtDiachi
             // 
             this.txtDiachi.Location = new System.Drawing.Point(157, 73);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(200, 23);
-            this.txtDiachi.TabIndex = 1;
+            this.txtDiachi.TabIndex = 2;
             // 
             // txtHoten
             // 
@@ -305,7 +308,7 @@
             this.btnThem.Location = new System.Drawing.Point(716, 32);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
-            this.btnThem.TabIndex = 8;
+            this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -316,7 +319,7 @@
             this.btnXoa.Location = new System.Drawing.Point(716, 76);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
-            this.btnXoa.TabIndex = 8;
+            this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
@@ -326,7 +329,7 @@
             this.btnSua.Location = new System.Drawing.Point(716, 119);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 8;
+            this.btnSua.TabIndex = 11;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -337,7 +340,7 @@
             this.btnLuu.Location = new System.Drawing.Point(716, 164);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
-            this.btnLuu.TabIndex = 8;
+            this.btnLuu.TabIndex = 12;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -348,7 +351,7 @@
             this.btnHuy.Location = new System.Drawing.Point(716, 205);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 36);
-            this.btnHuy.TabIndex = 8;
+            this.btnHuy.TabIndex = 13;
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);

@@ -60,8 +60,8 @@ namespace PhanMemQuanLyDoanThu
         }
         void HienGioiTinh()
         {
-            cmbGioitinh.DisplayMember = "Nam";
-            cmbGioitinh.DisplayMember = "Nữ";
+            cmbGioitinh.Items.Add("Nam");
+            cmbGioitinh.Items.Add("Nữ");
         }
         void HienThiNhanVien()
         {
@@ -89,6 +89,8 @@ namespace PhanMemQuanLyDoanThu
             HienBoPhan();
             HienChucVu();
             HienGioiTinh();
+            AcceptButton = btnThem;
+            txtHoten.Focus();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -100,6 +102,7 @@ namespace PhanMemQuanLyDoanThu
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            txtHoten.Focus();
             if (lsvNhanVien.SelectedIndices.Count > 0)
             {
                 themmoi = false;
@@ -144,13 +147,28 @@ namespace PhanMemQuanLyDoanThu
                 dtpNgaySinh.Value = DateTime.Parse(lsvNhanVien.SelectedItems[0].SubItems[4].Text);
                 dtpNgayLam.Value = DateTime.Parse(lsvNhanVien.SelectedItems[0].SubItems[5].Text);
                 txtDienThoai.Text = lsvNhanVien.SelectedItems[0].SubItems[6].Text;
-                cmbGioitinh.SelectedIndex = cmbGioitinh.FindString(lsvNhanVien.SelectedItems[0].SubItems[7].Text);
+                cmbGioitinh.SelectedItem = cmbGioitinh.FindString(lsvNhanVien.SelectedItems[0].SubItems[7].ToString());
                 txtDiachi.Text = lsvNhanVien.SelectedItems[0].SubItems[8].Text;
                 
                 //Tìm vị trí của Tên bằng cấp trong Combobox
                
 
             }
+        }
+
+        private void cboBoPhan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cboChucVu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbGioitinh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

@@ -51,5 +51,13 @@ namespace PhanMemQuanLyDoanThu
             DataTable dt = db.Execute(strSQL);
             return dt;
         }
+        public DataTable LayDSNhanvienBoPhan(string mabp)
+        {
+            string strSQL = string.Format("Select MANV, TENNV, TENCHUCVU,TENBOPHAN,NGAYSINH,NGAYVAOLAM,DIENTHOAI,GIOITINH,DIACHI From NHANVIEN A, CHUCVU B, BOPHAN C Where A.MACHUCVU=B.MACHUCVU AND A.MABOPHAN=C.MABOPHAN AND A.MABOPHAN = '{0}'",mabp);
+            DataTable dt = db.Execute(strSQL);
+            //Goi phuong thuc truy xuat du lieu 
+            return dt;
+        }
+
     }
 }
