@@ -30,7 +30,8 @@ namespace PhanMemQuanLyDoanThu
         }
         public void ThemNhanVienDS(string tennv,string ma_chucvu, string ma_bophan, string ngaysinh,string ngayvao, string dt, string gioitinh, string diachi)
         {
-            //string strSQL = string.Format("")
+            string strSQL = string.Format("Insert Into NHANVIEN Values(N'{0}','{1}','{2}','{3}','{4}','{5}',N'{6}',N'{7}')",tennv,ma_chucvu,ma_bophan,ngaysinh,ngayvao,dt,gioitinh,diachi);
+            db.ExecuteNonQuery(strSQL);
         }
         public DataTable LayBoPhan()
         {

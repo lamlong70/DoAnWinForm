@@ -114,15 +114,15 @@ namespace PhanMemQuanLyDoanThu
             string ngaylam = String.Format("{0:MM/dd/yyyy}", dtpNgayLam.Value);
             if (themmoi)
             {
-               // nv.ThemNhanVien(txtHoten.Text, ngay, txtDiaChi.Text,txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
+                nv.ThemNhanVienDS(txtHoten.Text,cboChucVu.SelectedValue.ToString(),cboBoPhan.SelectedValue.ToString(),ngaysinh,ngaylam,txtDienThoai.Text,cmbGioitinh.Text,txtDiachi.Text);
                 MessageBox.Show("Thêm mới thành công");
             }
             else
             {
-                nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text,txtHoten.Text, ngay, txtDiaChi.Text, txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
+                //nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text,txtHoten.Text, ngay, txtDiaChi.Text, txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
                 MessageBox.Show("Cập nhật thành công");
             }
-            HienthiNhanvien();
+            //HienthiNhanvien();
             setNull();
 
         }
