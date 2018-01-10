@@ -65,5 +65,11 @@ namespace PhanMemQuanLyDoanThu
             Form ttSanpham = new TTsanpham();
             ttSanpham.Show();
         }
+
+        private void btnNhanvien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form NhanVien = new FormNhanvien();
+            NhanVien.Show();
+        }
     }
 }
