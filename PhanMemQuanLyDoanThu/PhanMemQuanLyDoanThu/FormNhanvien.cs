@@ -60,7 +60,7 @@ namespace PhanMemQuanLyDoanThu
         }
         void HienThiNhanVien()
         {
-            //lsvNhanVien.Items.Clear();
+            lsvNhanVien.Items.Clear();
             DataTable dt = nv.LayDSNhanvien();
             for(int i=0;i<dt.Rows.Count;i++)
             {
@@ -123,7 +123,7 @@ namespace PhanMemQuanLyDoanThu
                // nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text,txtHoten.Text, ngay, txtDiaChi.Text, txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
                 MessageBox.Show("Cập nhật thành công");
             }
-            //HienthiNhanvien();
+            HienThiNhanVien();
             setNull();
 
         }

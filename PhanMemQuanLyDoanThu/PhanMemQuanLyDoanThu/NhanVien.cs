@@ -23,16 +23,17 @@ namespace PhanMemQuanLyDoanThu
             //Goi phuong thuc truy xuat du lieu 
             return dt;
         }
-        public void ThemNhanVien(string tennv, string tendn, string matkhau)
+        public void ThemNhanVien(string tendn, string matkhau)
         {
-            string strSQL = string.Format("Insert Into NHANVIEN  Values(N'{0}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'{1}','{2}')",tennv,tendn,matkhau);
+            string strSQL = string.Format("Insert Into DANGKY  Values('{0}','{1}')",tendn,matkhau);
             db.ExecuteNonQuery(strSQL);
         }
         public void ThemNhanVienDS(string tennv,string ma_chucvu, string ma_bophan, string ngaysinh,string ngayvao, string dt, string gioitinh, string diachi)
         {
-            string strSQL = string.Format("Insert Into NHANVIEN Values(N'{0}','{1}','{2}','{3}','{4}','{5}',N'{6}',N'{7}',NULL,NULL)",tennv,ma_chucvu,ma_bophan,ngaysinh,ngayvao,dt,gioitinh,diachi);
+            string strSQL = string.Format("Insert Into NHANVIEN Values(N'{0}','{1}','{2}','{3}','{4}','{5}',N'{6}',N'{7}')",tennv,ma_chucvu,ma_bophan,ngaysinh,ngayvao,dt,gioitinh,diachi);
             db.ExecuteNonQuery(strSQL);
         }
+
         public DataTable LayBoPhan()
         {
             string strSQL = "Select * from BOPHAN";

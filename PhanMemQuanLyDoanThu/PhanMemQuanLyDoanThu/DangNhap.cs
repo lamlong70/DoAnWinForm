@@ -48,7 +48,7 @@ namespace PhanMemQuanLyDoanThu
             using (SqlConnection sqlCon = new SqlConnection(conString))
             {
                 sqlCon.Open();
-                SqlCommand cmd = new SqlCommand(@"SELECT Count(*) FROM NHANVIEN 
+                SqlCommand cmd = new SqlCommand(@"SELECT Count(*) FROM DANGKY
                                         WHERE TENDANGNHAP=@uname and 
                                         MATKHAU=@pass",sqlCon);
                 cmd.Parameters.AddWithValue("@uname", txtTendn.Text);

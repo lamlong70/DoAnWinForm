@@ -41,7 +41,7 @@ namespace PhanMemQuanLyDoanThu
         {
             using (SqlConnection sqlCon = new SqlConnection(conString)) 
             {
-                if (txtHovaTen.Text == "" || txtMatkhau.Text == "" || txtTendn.Text == "")
+                if (txtMatkhau.Text == "" || txtTendn.Text == "")
                     MessageBox.Show("Hãy điền đầy đủ thông tin");
                 else if (txtMatkhau.Text != txtNhaplai.Text)
                     MessageBox.Show("Mật khẩu không trùng nhau");
@@ -54,7 +54,7 @@ namespace PhanMemQuanLyDoanThu
                     sqlCmd.Parameters.AddWithValue("@TenDn", txtTendn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Password", txtMatkhau.Text.Trim());
                     sqlCmd.ExecuteNonQuery();*/
-                    nv.ThemNhanVien(txtHovaTen.Text, txtTendn.Text, txtMatkhau.Text);
+                    nv.ThemNhanVien(txtTendn.Text, txtMatkhau.Text);
                     MessageBox.Show("Đăng ký thành công");
                     Clear();
                 }
@@ -62,7 +62,7 @@ namespace PhanMemQuanLyDoanThu
         }
         void Clear()
         {
-            txtHovaTen.Text = txtTendn.Text = txtMatkhau.Text = txtNhaplai.Text = "";
+            txtTendn.Text = txtMatkhau.Text = txtNhaplai.Text = "";
         }
 
         private void DangKy_Load(object sender, EventArgs e)
