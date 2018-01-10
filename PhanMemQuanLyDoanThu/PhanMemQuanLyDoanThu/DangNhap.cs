@@ -15,7 +15,7 @@ namespace PhanMemQuanLyDoanThu
 {
     public partial class DangNhap : DevExpress.XtraEditors.XtraForm
     {
-        public String conString = @"Data Source=TP500LA;Initial Catalog=QUANLYDOANHTHU;Integrated Security=True";
+        public String conString = @"Data Source=TP500LA;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
         NhanVien nv = new NhanVien();
         public DangNhap()
         {
@@ -36,7 +36,7 @@ namespace PhanMemQuanLyDoanThu
         private void DangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dr;
-            dr = XtraMessageBox.Show("Bạn có muốn huỷ không ?", "Thông Báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            dr = XtraMessageBox.Show("Bạn có muốn thoát không ?", "Thông Báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.No)
             {
                 e.Cancel = true;
@@ -55,7 +55,10 @@ namespace PhanMemQuanLyDoanThu
                 cmd.Parameters.AddWithValue("@pass", txtMatkhau.Text);
                 int result = (int)cmd.ExecuteScalar();
                 if (result > 0)
+                {
                     MessageBox.Show("Đăng nhập thành công");
+                    Close();
+                }
                 else
                     MessageBox.Show("Đăng nhập thất bại");
             }
