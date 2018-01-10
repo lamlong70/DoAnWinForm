@@ -113,3 +113,4 @@ E:\Doan\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\bin\Debug\es\DevEx
 E:\Doan\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
 E:\Doan\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
 E:\Doan\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.Bophan.resources
+D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.Bophan.resources

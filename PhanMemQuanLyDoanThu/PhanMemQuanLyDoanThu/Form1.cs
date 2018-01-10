@@ -40,14 +40,28 @@ namespace PhanMemQuanLyDoanThu
 
         private void btnDangky_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form dangky = new DangKy();
-            dangky.Show();
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "DangKy")
+                {
+                    f.Activate();
+                    return;
+                }
+            DangKy dk = new DangKy();
+            dk.MdiParent = this;
+            dk.Show();
         }
 
         private void btnDangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form dangnhap = new DangNhap();
-            dangnhap.Show();
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "DangNhap")
+                {
+                    f.Activate();
+                    return;
+                }
+            DangNhap dn = new DangNhap();
+            dn.MdiParent = this;
+            dn.Show();
         }
 
         private void btnDangxuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -62,19 +76,33 @@ namespace PhanMemQuanLyDoanThu
 
         private void btnThemsp_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form ttSanpham = new TTsanpham();
-            ttSanpham.Show();
+            
         }
 
         private void btnNhanvien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form NhanVien = new FormNhanvien();
-            NhanVien.Show();
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "FormNhanvien")
+                {
+                    f.Activate();
+                    return;
+                }
+            FormNhanvien nv = new FormNhanvien();
+            nv.MdiParent = this;
+            nv.Show();
         }
 
         private void btnBophan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+            foreach(Form f in this.MdiChildren)
+                if(f.Name=="Bophan")
+                {
+                    f.Activate();
+                    return;
+                }
+                Bophan bp = new Bophan();
+                bp.MdiParent = this;
+                bp.Show();
         }
     }
 }
