@@ -57,4 +57,4 @@ CREATE TABLE CHITIETHOADON (
 
 select TENDANGNHAP
 from NHANVIEN
-where TENNV=N'L‚m Th‡nh Long'
+where TENNV=N'L√¢m Th√†nh Long'
