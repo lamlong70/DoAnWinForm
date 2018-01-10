@@ -28,6 +28,7 @@ namespace PhanMemQuanLyDoanThu
         private void Bophan_Load(object sender, EventArgs e)
         {
             HienBoPhan();
+            AcceptButton = btnXem;
         }
         void HienThiNhanVien()
         {
@@ -49,6 +50,11 @@ namespace PhanMemQuanLyDoanThu
         private void btnXem_Click(object sender, EventArgs e)
         {
             HienThiNhanVien();
+        }
+
+        private void cboBoPhan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

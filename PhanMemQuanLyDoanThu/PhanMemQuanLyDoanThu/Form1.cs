@@ -22,9 +22,35 @@ namespace PhanMemQuanLyDoanThu
             themes.LookAndFeel.SkinName = "Springtime";
         }
 
+        void setButton(bool val)
+        {
+            btnPhanquyen.Enabled = val;
+            btnDangxuat.Enabled = val;
+            btnNhanvien.Enabled = val;
+            btnChucvu.Enabled = val;
+            btnBophan.Enabled = val;
+            btnPhancong.Enabled = val;
+            btnBangpc.Enabled = val;
+            btnPhancongnv.Enabled = val;
+            btnLuong.Enabled=val;
+            btnVatlieu.Enabled=val;
+            btnChung.Enabled=val;
+            btnKhac.Enabled = val; ;
+            btnDoanhthu.Enabled = val;
+            btnNhacc.Enabled = val;
+            btnDondh.Enabled = val;
+            btnChitiet.Enabled = val;
+            btnDathang.Enabled = val;
+            btnPhieunhap.Enabled = val;
+            btnPhieuxuat.Enabled = val;
+            btnXuatkho.Enabled = val;
+            btnKho.Enabled = val;
+            btnQuanlykho.Enabled = val;
+            btnNguyenlieu.Enabled = val;
+        }
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnPhanquyen.Enabled = false;
+            setButton(false);
             Skins();
         }
 

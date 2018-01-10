@@ -63,6 +63,7 @@
             this.cboBoPhan.Name = "cboBoPhan";
             this.cboBoPhan.Size = new System.Drawing.Size(141, 21);
             this.cboBoPhan.TabIndex = 1;
+            this.cboBoPhan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboBoPhan_KeyPress);
             // 
             // btnXem
             // 
