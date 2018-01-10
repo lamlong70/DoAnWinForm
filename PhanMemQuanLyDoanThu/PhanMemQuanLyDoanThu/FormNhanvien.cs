@@ -120,6 +120,7 @@ namespace PhanMemQuanLyDoanThu
             else
             {
                 //nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text,txtHoten.Text, ngay, txtDiaChi.Text, txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
+               // nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text,txtHoten.Text, ngay, txtDiaChi.Text, txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
                 MessageBox.Show("Cập nhật thành công");
             }
             //HienthiNhanvien();

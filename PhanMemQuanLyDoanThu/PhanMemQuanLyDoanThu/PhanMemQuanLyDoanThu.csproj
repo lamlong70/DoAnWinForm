@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bophan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bophan.Designer.cs">
+      <DependentUpon>Bophan.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     <Compile Include="TTsanpham.Designer.cs">
       <DependentUpon>TTsanpham.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Bophan.resx">
+      <DependentUpon>Bophan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
