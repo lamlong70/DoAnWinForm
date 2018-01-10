@@ -71,5 +71,10 @@ namespace PhanMemQuanLyDoanThu
             Form NhanVien = new FormNhanvien();
             NhanVien.Show();
         }
+
+        private void btnBophan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+        }
     }
 }

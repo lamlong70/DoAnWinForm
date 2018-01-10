@@ -258,6 +258,7 @@
             this.btnBophan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBophan.ImageOptions.Image")));
             this.btnBophan.Name = "btnBophan";
             this.btnBophan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnBophan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBophan_ItemClick);
             // 
             // barButtonItem4
             // 
