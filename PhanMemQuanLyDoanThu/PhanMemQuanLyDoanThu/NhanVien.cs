@@ -33,7 +33,12 @@ namespace PhanMemQuanLyDoanThu
             string strSQL = string.Format("Insert Into NHANVIEN Values(N'{0}','{1}','{2}','{3}','{4}','{5}',N'{6}',N'{7}')",tennv,ma_chucvu,ma_bophan,ngaysinh,ngayvao,dt,gioitinh,diachi);
             db.ExecuteNonQuery(strSQL);
         }
+        public void CapNhatNhanVien(string manv, string tennv, string ma_chucvu, string ma_bophan, string ngaysinh, string ngayvao, string dt, string gioitinh, string diachi)
+        {
+            string str = string.Format("Update NHANVIEN set TENNV = N'{0}',MACHUCVU ='{1}',MABOPHAN ='{2}',NGAYSINH = {3},NGAYVAOLAM ={4}, DIENTHOAI ={5},GIOITINH =N'{6}',DIACHI=N'{7}' where MANV = {8}", tennv,ma_chucvu,ma_bophan,ngaysinh,ngayvao,dt,gioitinh,diachi,manv);
+            db.ExecuteNonQuery(str);
 
+        }
         public DataTable LayBoPhan()
         {
             string strSQL = "Select * from BOPHAN";

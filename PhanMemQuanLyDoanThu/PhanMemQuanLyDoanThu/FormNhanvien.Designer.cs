@@ -141,9 +141,6 @@
             // 
             // cmbGioitinh
             // 
-            this.cmbGioitinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
             this.cmbGioitinh.Location = new System.Drawing.Point(466, 73);
             this.cmbGioitinh.Name = "cmbGioitinh";
             this.cmbGioitinh.Size = new System.Drawing.Size(157, 24);
@@ -255,6 +252,7 @@
             this.lsvNhanVien.TabIndex = 0;
             this.lsvNhanVien.UseCompatibleStateImageBehavior = false;
             this.lsvNhanVien.View = System.Windows.Forms.View.Details;
+            this.lsvNhanVien.SelectedIndexChanged += new System.EventHandler(this.lsvNhanVien_SelectedIndexChanged);
             // 
             // clmMaNV
             // 

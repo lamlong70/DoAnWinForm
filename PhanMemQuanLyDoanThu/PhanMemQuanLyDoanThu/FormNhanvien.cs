@@ -58,6 +58,11 @@ namespace PhanMemQuanLyDoanThu
             cboChucVu.DisplayMember = "TENCHUCVU";
             cboChucVu.ValueMember = "MACHUCVU";
         }
+        void HienGioiTinh()
+        {
+            cmbGioitinh.DisplayMember = "Nam";
+            cmbGioitinh.DisplayMember = "Nữ";
+        }
         void HienThiNhanVien()
         {
             lsvNhanVien.Items.Clear();
@@ -83,6 +88,7 @@ namespace PhanMemQuanLyDoanThu
             HienThiNhanVien();
             HienBoPhan();
             HienChucVu();
+            HienGioiTinh();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -119,13 +125,32 @@ namespace PhanMemQuanLyDoanThu
             }
             else
             {
-                //nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text,txtHoten.Text, ngay, txtDiaChi.Text, txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
-               // nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text,txtHoten.Text, ngay, txtDiaChi.Text, txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
+                nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text, txtHoten.Text, cboChucVu.SelectedValue.ToString(), cboBoPhan.SelectedValue.ToString(), ngaysinh, ngaylam, txtDienThoai.Text, cmbGioitinh.Text, txtDiachi.Text);
                 MessageBox.Show("Cập nhật thành công");
             }
             HienThiNhanVien();
             setNull();
 
+        }
+
+        private void lsvNhanVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lsvNhanVien.SelectedIndices.Count > 0)
+            {
+                txtHoten.Text = lsvNhanVien.SelectedItems[0].SubItems[1].Text;
+                cboChucVu.SelectedIndex = cboChucVu.FindString(lsvNhanVien.SelectedItems[0].SubItems[2].Text);
+                cboBoPhan.SelectedIndex = cboBoPhan.FindString(lsvNhanVien.SelectedItems[0].SubItems[3].Text);
+                //Chuyen sang kieu dateTime
+                dtpNgaySinh.Value = DateTime.Parse(lsvNhanVien.SelectedItems[0].SubItems[4].Text);
+                dtpNgayLam.Value = DateTime.Parse(lsvNhanVien.SelectedItems[0].SubItems[5].Text);
+                txtDienThoai.Text = lsvNhanVien.SelectedItems[0].SubItems[6].Text;
+                cmbGioitinh.SelectedIndex = cmbGioitinh.FindString(lsvNhanVien.SelectedItems[0].SubItems[7].Text);
+                txtDiachi.Text = lsvNhanVien.SelectedItems[0].SubItems[8].Text;
+                
+                //Tìm vị trí của Tên bằng cấp trong Combobox
+               
+
+            }
         }
     }
 }
