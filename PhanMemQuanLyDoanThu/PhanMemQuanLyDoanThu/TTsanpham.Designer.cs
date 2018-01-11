@@ -297,6 +297,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "TTsanpham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TTsanpham";
             this.Load += new System.EventHandler(this.TTsanpham_Load);
             this.groupBox1.ResumeLayout(false);

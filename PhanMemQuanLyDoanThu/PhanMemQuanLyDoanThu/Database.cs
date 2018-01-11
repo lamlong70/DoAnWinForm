@@ -10,14 +10,18 @@ namespace PhanMemQuanLyDoanThu
 {
     class Database
     {
+        string DataBase = "QUANLYDOANHTHUDA";
+        string DataSource = "TP500LA";
+        
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
         public Database()
         {
-            string strCnn = @"Data Source=TP500LA; Database=QUANLYDOANHTHUDA;Integrated Security = True";
+            string strCnn = @"Data Source="+DataSource+"; Database="+DataBase+";Integrated Security = True";
             sqlConn = new SqlConnection(strCnn);
         }
+        
         //Phuong thuc de thuc hien cau lenh strSQL truy vân du lieu
         public DataTable Execute(string sqlStr)
         {
@@ -34,6 +38,15 @@ namespace PhanMemQuanLyDoanThu
             sqlcmd.ExecuteNonQuery();//Lenh hien lenh Them/Xoa/Sua
             sqlConn.Close();//Dong ket noi
         }
-
+        public void BackupDatabase(string Link)
+        {
+            string strCnn = @"Data Source=" + DataSource + "; Database=" + DataBase + ";Integrated Security = True";
+            sqlConn = new SqlConnection(strCnn);
+            sqlConn.Open();
+            string sql = "BACKUP DATABASE " + DataBase + " TO DISK = '" + Link + "\\"+DataBase+"-"+DateTime.Now.Ticks.ToString()+".bak'";
+            SqlCommand sqlcmd = new SqlCommand(sql, sqlConn);
+            sqlcmd.ExecuteNonQuery();
+        }
+       
     }
 }

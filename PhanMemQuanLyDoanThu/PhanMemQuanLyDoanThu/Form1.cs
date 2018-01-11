@@ -150,5 +150,28 @@ namespace PhanMemQuanLyDoanThu
             bp.MdiParent = this;
             bp.Show();
         }
+
+        private void btnSaoluu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Database db = new Database();
+            FolderBrowserDialog dlg = new FolderBrowserDialog();
+            if(dlg.ShowDialog() == DialogResult.OK)
+            {
+                string BackupFile = dlg.SelectedPath;
+                db.BackupDatabase(BackupFile);
+                MessageBox.Show("Backup thành công", "Thành công");
+            }
+        }
+
+        private void btnPhuchoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "Backup Files(*.bak)|*.bak|All Files(*.*)|*.*";
+            dlg.FilterIndex = 0;
+            if(dlg.ShowDialog()==DialogResult.OK)
+            {
+
+            }
+        }
     }
 }
