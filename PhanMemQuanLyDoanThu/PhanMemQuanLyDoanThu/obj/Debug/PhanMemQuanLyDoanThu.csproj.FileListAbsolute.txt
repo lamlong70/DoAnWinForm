@@ -105,7 +105,6 @@ D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\bin\Debug\es\DevExpress
 D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\bin\Debug\ja\DevExpress.Pdf.v17.1.Core.resources.dll
 D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
 D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.csprojResolveAssemblyReference.cache
-D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.Bophan.resources
 D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.DangKy.resources
 D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.DangNhap.resources
 D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.frmMain.resources
