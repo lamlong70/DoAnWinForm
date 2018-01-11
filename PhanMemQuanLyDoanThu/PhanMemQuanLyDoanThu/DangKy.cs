@@ -24,7 +24,10 @@ namespace PhanMemQuanLyDoanThu
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            
             Close();
+            DangNhap dn = new DangNhap();
+            dn.Show();
         }
 
         private void DangKy_FormClosing(object sender, FormClosingEventArgs e)
@@ -34,6 +37,7 @@ namespace PhanMemQuanLyDoanThu
             if (dr == DialogResult.No)
             {
                 e.Cancel = true;
+                
             }
         }
 
@@ -56,6 +60,9 @@ namespace PhanMemQuanLyDoanThu
                     sqlCmd.ExecuteNonQuery();*/
                     nv.ThemNhanVien(txtTendn.Text, txtMatkhau.Text);
                     MessageBox.Show("Đăng ký thành công");
+                    DangNhap dn = new DangNhap();
+                    dn.Show();
+                    Hide();
                     Clear();
                 }
             }

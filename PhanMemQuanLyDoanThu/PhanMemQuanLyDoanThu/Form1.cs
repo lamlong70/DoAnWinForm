@@ -22,7 +22,7 @@ namespace PhanMemQuanLyDoanThu
             themes.LookAndFeel.SkinName = "Springtime";
         }
 
-        void setButton(bool val)
+        public void setButton(bool val)
         {
             btnPhanquyen.Enabled = val;
             btnDangxuat.Enabled = val;
@@ -50,7 +50,7 @@ namespace PhanMemQuanLyDoanThu
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
-            setButton(false);
+            setButton(true);
             Skins();
         }
 
@@ -79,20 +79,21 @@ namespace PhanMemQuanLyDoanThu
 
         private void btnDangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            foreach (Form f in this.MdiChildren)
+            /*foreach (Form f in this.MdiChildren)
                 if (f.Name == "DangNhap")
                 {
                     f.Activate();
                     return;
-                }
+                }*/
             DangNhap dn = new DangNhap();
-            dn.MdiParent = this;
+            //dn.MdiParent = this;
+            this.Hide();
             dn.Show();
         }
 
         private void btnDangxuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            btnPhanquyen.Enabled = false;
+            setButton(false);
         }
 
         private void lsvDanhSach_SelectedIndexChanged(object sender, EventArgs e)
