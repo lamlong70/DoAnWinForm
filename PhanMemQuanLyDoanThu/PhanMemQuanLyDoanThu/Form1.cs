@@ -50,6 +50,8 @@ namespace PhanMemQuanLyDoanThu
         }
         private void frmMain_Load(object sender, EventArgs e)
         {
+            btnDangNhap.Enabled = false;
+            btnDangKy.Enabled = false;
             setButton(true);
             Skins();
         }
@@ -94,6 +96,10 @@ namespace PhanMemQuanLyDoanThu
         private void btnDangxuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             setButton(false);
+            DangNhap dn = new DangNhap();
+            Hide();
+            dn.Show();
+            
         }
 
         private void lsvDanhSach_SelectedIndexChanged(object sender, EventArgs e)

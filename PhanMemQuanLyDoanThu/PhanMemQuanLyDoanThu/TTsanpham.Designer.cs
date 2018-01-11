@@ -172,12 +172,12 @@
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clmTensp,
             this.clmMasp,
+            this.clmTensp,
             this.clmLoaisp,
+            this.clmNgay,
             this.clmGia,
-            this.clmSoluong,
-            this.clmNgay});
+            this.clmSoluong});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(17, 22);
