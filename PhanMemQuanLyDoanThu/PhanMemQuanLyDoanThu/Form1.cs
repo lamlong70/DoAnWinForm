@@ -137,5 +137,18 @@ namespace PhanMemQuanLyDoanThu
                 bp.MdiParent = this;
                 bp.Show();
         }
+
+        private void btnKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "TTsanpham")
+                {
+                    f.Activate();
+                    return;
+                }
+            TTsanpham bp = new TTsanpham();
+            bp.MdiParent = this;
+            bp.Show();
+        }
     }
 }
