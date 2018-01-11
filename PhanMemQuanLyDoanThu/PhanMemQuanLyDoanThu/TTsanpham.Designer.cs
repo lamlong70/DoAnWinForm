@@ -41,7 +41,7 @@
             this.txtSoluong = new System.Windows.Forms.TextBox();
             this.dtpNgay = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lsvSanPham = new System.Windows.Forms.ListView();
             this.clmTensp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmMasp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmLoaisp = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -160,7 +160,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.lsvSanPham);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(44, 233);
             this.groupBox1.Name = "groupBox1";
@@ -169,23 +169,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Sản Phẩm";
             // 
-            // listView1
+            // lsvSanPham
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsvSanPham.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmMasp,
             this.clmTensp,
             this.clmLoaisp,
             this.clmNgay,
             this.clmGia,
             this.clmSoluong});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(17, 22);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(688, 184);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lsvSanPham.FullRowSelect = true;
+            this.lsvSanPham.GridLines = true;
+            this.lsvSanPham.Location = new System.Drawing.Point(17, 22);
+            this.lsvSanPham.Name = "lsvSanPham";
+            this.lsvSanPham.Size = new System.Drawing.Size(688, 184);
+            this.lsvSanPham.TabIndex = 0;
+            this.lsvSanPham.UseCompatibleStateImageBehavior = false;
+            this.lsvSanPham.View = System.Windows.Forms.View.Details;
             // 
             // clmTensp
             // 
@@ -226,6 +226,7 @@
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
@@ -246,6 +247,7 @@
             this.btnSua.TabIndex = 7;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLuu
             // 
@@ -266,6 +268,7 @@
             this.btnHuy.TabIndex = 7;
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // TTsanpham
             // 
@@ -292,6 +295,7 @@
             this.Controls.Add(this.label1);
             this.Name = "TTsanpham";
             this.Text = "TTsanpham";
+            this.Load += new System.EventHandler(this.TTsanpham_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -313,7 +317,7 @@
         private System.Windows.Forms.TextBox txtSoluong;
         private System.Windows.Forms.DateTimePicker dtpNgay;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lsvSanPham;
         private System.Windows.Forms.ColumnHeader clmTensp;
         private System.Windows.Forms.ColumnHeader clmMasp;
         private System.Windows.Forms.ColumnHeader clmLoaisp;
