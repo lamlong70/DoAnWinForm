@@ -58,9 +58,14 @@ namespace PhanMemQuanLyDoanThu
             cboChucVu.DisplayMember = "TENCHUCVU";
             cboChucVu.ValueMember = "MACHUCVU";
         }
+        void HienGioiTinh()
+        {
+            cmbGioitinh.Items.Add("Nam");
+            cmbGioitinh.Items.Add("Nữ");
+        }
         void HienThiNhanVien()
         {
-            //lsvNhanVien.Items.Clear();
+            lsvNhanVien.Items.Clear();
             DataTable dt = nv.LayDSNhanvien();
             for(int i=0;i<dt.Rows.Count;i++)
             {
@@ -83,6 +88,9 @@ namespace PhanMemQuanLyDoanThu
             HienThiNhanVien();
             HienBoPhan();
             HienChucVu();
+            HienGioiTinh();
+            AcceptButton = btnThem;
+            txtHoten.Focus();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -94,6 +102,7 @@ namespace PhanMemQuanLyDoanThu
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            txtHoten.Focus();
             if (lsvNhanVien.SelectedIndices.Count > 0)
             {
                 themmoi = false;
@@ -114,17 +123,70 @@ namespace PhanMemQuanLyDoanThu
             string ngaylam = String.Format("{0:MM/dd/yyyy}", dtpNgayLam.Value);
             if (themmoi)
             {
-               // nv.ThemNhanVien(txtHoten.Text, ngay, txtDiaChi.Text,txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
+                nv.ThemNhanVienDS(txtHoten.Text,cboChucVu.SelectedValue.ToString(),cboBoPhan.SelectedValue.ToString(),ngaysinh,ngaylam,txtDienThoai.Text,cmbGioitinh.Text,txtDiachi.Text);
                 MessageBox.Show("Thêm mới thành công");
+                setButton(true);
             }
             else
             {
-               // nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text,txtHoten.Text, ngay, txtDiaChi.Text, txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
+                nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text, txtHoten.Text, cboChucVu.SelectedValue.ToString(), cboBoPhan.SelectedValue.ToString(), ngaysinh, ngaylam, txtDienThoai.Text, cmbGioitinh.Text, txtDiachi.Text);
                 MessageBox.Show("Cập nhật thành công");
+                setButton(true);
             }
-            //HienthiNhanvien();
+            HienThiNhanVien();
             setNull();
 
+        }
+
+        private void lsvNhanVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lsvNhanVien.SelectedIndices.Count > 0)
+            {
+                txtHoten.Text = lsvNhanVien.SelectedItems[0].SubItems[1].Text;
+                cboChucVu.SelectedIndex = cboChucVu.FindString(lsvNhanVien.SelectedItems[0].SubItems[2].Text);
+                cboBoPhan.SelectedIndex = cboBoPhan.FindString(lsvNhanVien.SelectedItems[0].SubItems[3].Text);
+                //Chuyen sang kieu dateTime
+                dtpNgaySinh.Value = DateTime.Parse(lsvNhanVien.SelectedItems[0].SubItems[4].Text);
+                dtpNgayLam.Value = DateTime.Parse(lsvNhanVien.SelectedItems[0].SubItems[5].Text);
+                txtDienThoai.Text = lsvNhanVien.SelectedItems[0].SubItems[6].Text;
+                cmbGioitinh.SelectedItem = cmbGioitinh.FindString(lsvNhanVien.SelectedItems[0].SubItems[7].ToString());
+                txtDiachi.Text = lsvNhanVien.SelectedItems[0].SubItems[8].Text;
+                
+                //Tìm vị trí của Tên bằng cấp trong Combobox
+               
+
+            }
+        }
+
+        private void cboBoPhan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cboChucVu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void cmbGioitinh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (lsvNhanVien.SelectedIndices.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("Bạn có chắc xóa không ? ", "Xóa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    nv.XoaNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text);
+                    lsvNhanVien.Items.RemoveAt(lsvNhanVien.SelectedIndices[0]);
+                    setNull();
+                }
+            }
+            else
+                MessageBox.Show("Bạn phải chọn nhân viên cần xóa");
         }
     }
 }

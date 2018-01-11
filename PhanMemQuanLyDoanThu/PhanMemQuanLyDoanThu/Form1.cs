@@ -22,9 +22,37 @@ namespace PhanMemQuanLyDoanThu
             themes.LookAndFeel.SkinName = "Springtime";
         }
 
+        public void setButton(bool val)
+        {
+            btnPhanquyen.Enabled = val;
+            btnDangxuat.Enabled = val;
+            btnNhanvien.Enabled = val;
+            btnChucvu.Enabled = val;
+            btnBophan.Enabled = val;
+            btnPhancong.Enabled = val;
+            btnBangpc.Enabled = val;
+            btnPhancongnv.Enabled = val;
+            btnLuong.Enabled=val;
+            btnVatlieu.Enabled=val;
+            btnChung.Enabled=val;
+            btnKhac.Enabled = val; ;
+            btnDoanhthu.Enabled = val;
+            btnNhacc.Enabled = val;
+            btnDondh.Enabled = val;
+            btnChitiet.Enabled = val;
+            btnDathang.Enabled = val;
+            btnPhieunhap.Enabled = val;
+            btnPhieuxuat.Enabled = val;
+            btnXuatkho.Enabled = val;
+            btnKho.Enabled = val;
+            btnQuanlykho.Enabled = val;
+            btnNguyenlieu.Enabled = val;
+        }
         private void frmMain_Load(object sender, EventArgs e)
         {
-            btnPhanquyen.Enabled = false;
+            btnDangNhap.Enabled = false;
+            btnDangKy.Enabled = false;
+            setButton(true);
             Skins();
         }
 
@@ -40,19 +68,38 @@ namespace PhanMemQuanLyDoanThu
 
         private void btnDangky_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form dangky = new DangKy();
-            dangky.Show();
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "DangKy")
+                {
+                    f.Activate();
+                    return;
+                }
+            DangKy dk = new DangKy();
+            dk.MdiParent = this;
+            dk.Show();
         }
 
         private void btnDangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form dangnhap = new DangNhap();
-            dangnhap.Show();
+            /*foreach (Form f in this.MdiChildren)
+                if (f.Name == "DangNhap")
+                {
+                    f.Activate();
+                    return;
+                }*/
+            DangNhap dn = new DangNhap();
+            //dn.MdiParent = this;
+            this.Hide();
+            dn.Show();
         }
 
         private void btnDangxuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            btnPhanquyen.Enabled = false;
+            setButton(false);
+            DangNhap dn = new DangNhap();
+            Hide();
+            dn.Show();
+            
         }
 
         private void lsvDanhSach_SelectedIndexChanged(object sender, EventArgs e)
@@ -62,19 +109,69 @@ namespace PhanMemQuanLyDoanThu
 
         private void btnThemsp_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form ttSanpham = new TTsanpham();
-            ttSanpham.Show();
+            
         }
 
         private void btnNhanvien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form NhanVien = new FormNhanvien();
-            NhanVien.Show();
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "FormNhanvien")
+                {
+                    f.Activate();
+                    return;
+                }
+            FormNhanvien nv = new FormNhanvien();
+            nv.MdiParent = this;
+            nv.Show();
         }
 
         private void btnBophan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+            foreach(Form f in this.MdiChildren)
+                if(f.Name=="Bophan")
+                {
+                    f.Activate();
+                    return;
+                }
+                Bophan bp = new Bophan();
+                bp.MdiParent = this;
+                bp.Show();
+        }
+
+        private void btnKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "TTsanpham")
+                {
+                    f.Activate();
+                    return;
+                }
+            TTsanpham bp = new TTsanpham();
+            bp.MdiParent = this;
+            bp.Show();
+        }
+
+        private void btnSaoluu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Database db = new Database();
+            FolderBrowserDialog dlg = new FolderBrowserDialog();
+            if(dlg.ShowDialog() == DialogResult.OK)
+            {
+                string BackupFile = dlg.SelectedPath;
+                db.BackupDatabase(BackupFile);
+                MessageBox.Show("Backup thành công", "Thành công");
+            }
+        }
+
+        private void btnPhuchoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "Backup Files(*.bak)|*.bak|All Files(*.*)|*.*";
+            dlg.FilterIndex = 0;
+            if(dlg.ShowDialog()==DialogResult.OK)
+            {
+
+            }
         }
     }
 }
