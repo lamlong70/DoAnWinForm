@@ -125,11 +125,13 @@ namespace PhanMemQuanLyDoanThu
             {
                 nv.ThemNhanVienDS(txtHoten.Text,cboChucVu.SelectedValue.ToString(),cboBoPhan.SelectedValue.ToString(),ngaysinh,ngaylam,txtDienThoai.Text,cmbGioitinh.Text,txtDiachi.Text);
                 MessageBox.Show("Thêm mới thành công");
+                setButton(true);
             }
             else
             {
                 nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text, txtHoten.Text, cboChucVu.SelectedValue.ToString(), cboBoPhan.SelectedValue.ToString(), ngaysinh, ngaylam, txtDienThoai.Text, cmbGioitinh.Text, txtDiachi.Text);
                 MessageBox.Show("Cập nhật thành công");
+                setButton(true);
             }
             HienThiNhanVien();
             setNull();

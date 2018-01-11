@@ -33,6 +33,11 @@ namespace PhanMemQuanLyDoanThu
             btnThem.Enabled = val;
             btnXoa.Enabled = val;
             btnSua.Enabled = val;
+            txtMasp.Enabled = !val;
+            txtTensp.Enabled = !val;
+            txtSoluong.Enabled = !val;
+            txtLoaisp.Enabled = !val;
+            txtGiasp.Enabled = !val;
             btnLuu.Enabled = !val;
             btnHuy.Enabled = !val;
         }
@@ -53,7 +58,11 @@ namespace PhanMemQuanLyDoanThu
         }
         private void TTsanpham_Load(object sender, EventArgs e)
         {
+            setNull();
+            setButton(true);
             HienThiSanPham();
+            AcceptButton = btnThem;
+            txtTensp.Focus();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -78,6 +87,39 @@ namespace PhanMemQuanLyDoanThu
         private void btnHuy_Click(object sender, EventArgs e)
         {
             setButton(true);
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            string ngaylap = String.Format("{0:MM/dd/yyyy}", dtpNgayLap.Value);
+            if (themmoi)
+            {
+                sp.ThemSanPham(txtMasp.Text, txtTensp.Text, txtLoaisp.Text, ngaylap,int.Parse(txtGiasp.Text), txtSoluong.Text);
+                MessageBox.Show("Thêm mới thành công");
+                setButton(true);
+            }
+            else
+            {
+                sp.CapNhatSanPham(lsvSanPham.SelectedItems[0].SubItems[0].Text, txtTensp.Text, txtLoaisp.Text, ngaylap, txtGiasp.Text,txtSoluong.Text);
+                MessageBox.Show("Cập nhật thành công");
+                setButton(true);
+            }
+            HienThiSanPham();
+            setNull();
+
+        }
+
+        private void lsvSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lsvSanPham.SelectedIndices.Count > 0)
+            {
+                txtMasp.Text = lsvSanPham.SelectedItems[0].SubItems[0].Text;
+                txtTensp.Text = lsvSanPham.SelectedItems[0].SubItems[1].Text;
+                txtLoaisp.Text = lsvSanPham.SelectedItems[0].SubItems[2].Text;                
+                dtpNgayLap.Value = DateTime.Parse(lsvSanPham.SelectedItems[0].SubItems[3].Text);
+                txtGiasp.Text = lsvSanPham.SelectedItems[0].SubItems[4].Text;
+                txtSoluong.Text = lsvSanPham.SelectedItems[0].SubItems[5].Text;
+            }
         }
     }
 }

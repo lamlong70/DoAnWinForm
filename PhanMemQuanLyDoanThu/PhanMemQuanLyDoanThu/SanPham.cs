@@ -23,16 +23,15 @@ namespace PhanMemQuanLyDoanThu
             //Goi phuong thuc truy xuat du lieu 
             return dt;
         }
-        public void ThemSanPham(string masp, string tensp, string loaisp, string ngaylap, string gia, string sl)
+        public void ThemSanPham(string masp, string tensp, string loaisp, string ngaylap, int gia, string sl)
         {
-            string strSQL = string.Format("Insert Into DANGKY  Values('{0}','{1}','{2}','{3}','{4}','{5}')",masp,tensp,loaisp,ngaylap,gia,sl);
+            string strSQL = string.Format("Insert Into SANPHAM  Values('{0}',N'{1}',N'{2}',{3},{4},'{5}')",masp,tensp,loaisp,ngaylap,gia/1000,sl);
             db.ExecuteNonQuery(strSQL);
         }
-        public void CapNhatNhanVien(string manv, string tennv, string ma_chucvu, string ma_bophan, string ngaysinh, string ngayvao, string dt, string gioitinh, string diachi)
+        public void CapNhatSanPham(string masp, string tensp, string loaisp, string ngaylap, string gia, string sl)
         {
-            string str = string.Format("Update NHANVIEN set TENNV = N'{0}',MACHUCVU ='{1}',MABOPHAN ='{2}',NGAYSINH = {3},NGAYVAOLAM ={4}, DIENTHOAI ={5},GIOITINH =N'{6}',DIACHI=N'{7}' where MANV = {8}", tennv, ma_chucvu, ma_bophan, ngaysinh, ngayvao, dt, gioitinh, diachi, manv);
+            string str = string.Format("Update SANPHAM set MASP = '{0}',TENSP =N'{1}',LOAISP =N'{2}',NGAYNHAP = {3},GIA ={4}/1000, SOLUONG ={5} where MASP = '{6}'", masp, tensp, loaisp,ngaylap, gia,sl, masp);
             db.ExecuteNonQuery(str);
-
         }
     }
 }
