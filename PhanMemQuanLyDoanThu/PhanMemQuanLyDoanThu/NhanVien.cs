@@ -39,6 +39,11 @@ namespace PhanMemQuanLyDoanThu
             db.ExecuteNonQuery(str);
 
         }
+        public void XoaNhanVien(string manv)
+        {
+            string sql = "Delete from NHANVIEN where MANV = " +manv;
+            db.ExecuteNonQuery(sql);
+        }
         public DataTable LayBoPhan()
         {
             string strSQL = "Select * from BOPHAN";

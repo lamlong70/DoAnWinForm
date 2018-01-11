@@ -70,6 +70,7 @@ namespace PhanMemQuanLyDoanThu
             themmoi = true;
             setButton(false);
             txtTensp.Focus();
+            AcceptButton = btnLuu;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -79,6 +80,8 @@ namespace PhanMemQuanLyDoanThu
             {
                 themmoi = false;
                 setButton(false);
+                AcceptButton = btnLuu;
+                txtTensp.Focus();
             }
             else
                 MessageBox.Show("Bạn phải chọn mẫu tin cập nhật", "Sửa mẫu tin");
@@ -120,6 +123,22 @@ namespace PhanMemQuanLyDoanThu
                 txtGiasp.Text = lsvSanPham.SelectedItems[0].SubItems[4].Text;
                 txtSoluong.Text = lsvSanPham.SelectedItems[0].SubItems[5].Text;
             }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (lsvSanPham.SelectedIndices.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("Bạn có chắc xóa không ? ", "Xóa sản phẩm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    sp.XoaSanPham(lsvSanPham.SelectedItems[0].SubItems[0].Text);
+                    lsvSanPham.Items.RemoveAt(lsvSanPham.SelectedIndices[0]);
+                    setNull();
+                }
+            }
+            else
+                MessageBox.Show("Bạn phải chọn sản phẩm cần xóa");
         }
     }
 }

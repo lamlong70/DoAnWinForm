@@ -33,5 +33,10 @@ namespace PhanMemQuanLyDoanThu
             string str = string.Format("Update SANPHAM set MASP = '{0}',TENSP =N'{1}',LOAISP =N'{2}',NGAYNHAP = {3},GIA ={4}/1000, SOLUONG ={5} where MASP = '{6}'", masp, tensp, loaisp,ngaylap, gia,sl, masp);
             db.ExecuteNonQuery(str);
         }
+        public void XoaSanPham(string masp)
+        {
+            string sql = "Delete from SANPHAM where MASP = '"+masp+"'";
+            db.ExecuteNonQuery(sql);
+        }
     }
 }

@@ -172,5 +172,21 @@ namespace PhanMemQuanLyDoanThu
         {
             e.Handled = true;
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (lsvNhanVien.SelectedIndices.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("Bạn có chắc xóa không ? ", "Xóa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
+                {
+                    nv.XoaNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text);
+                    lsvNhanVien.Items.RemoveAt(lsvNhanVien.SelectedIndices[0]);
+                    setNull();
+                }
+            }
+            else
+                MessageBox.Show("Bạn phải chọn nhân viên cần xóa");
+        }
     }
 }
