@@ -58,6 +58,10 @@ namespace PhanMemQuanLyDoanThu
         }
         private void TTsanpham_Load(object sender, EventArgs e)
         {
+            int witdhScreen = Screen.PrimaryScreen.WorkingArea.Width;
+            int heightScreen = Screen.PrimaryScreen.WorkingArea.Height;
+            this.Width = witdhScreen;
+            this.Height = heightScreen;
             setNull();
             setButton(true);
             HienThiSanPham();
@@ -140,5 +144,7 @@ namespace PhanMemQuanLyDoanThu
             else
                 MessageBox.Show("Bạn phải chọn sản phẩm cần xóa");
         }
+
+
     }
 }
