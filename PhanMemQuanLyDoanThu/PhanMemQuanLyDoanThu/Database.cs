@@ -18,11 +18,15 @@ namespace PhanMemQuanLyDoanThu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
         public Database()
         {
+<<<<<<< HEAD
+            string strCnn = "Data Source=TP500LA; Database=QUANLYDOANHTHUDA;Integrated Security = True";
+=======
 //<<<<<<< HEAD
             string strCnn = @"Data Source="+DataSource+"; Database="+DataBase+";Integrated Security = True";
 //=======
         //    string strCnn = @"Data Source=TP500LA; Database=QUANLYDOANHTHUDA;Integrated Security = True";
 //>>>>>>> Dan
+>>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
             sqlConn = new SqlConnection(strCnn);
         }
         

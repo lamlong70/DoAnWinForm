@@ -59,10 +59,14 @@ namespace PhanMemQuanLyDoanThu
                 if (result > 0)
                 {
                     MessageBox.Show("Đăng nhập thành công");
+<<<<<<< HEAD
+                    Close();
+=======
                     frmMain Child = new frmMain();
                     Child.setButton(true);
                     Child.Show();
                     this.Hide();
+>>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
                 }
                 else
                 {
