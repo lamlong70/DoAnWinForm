@@ -11,7 +11,7 @@ namespace PhanMemQuanLyDoanThu
     class Database
     {
         string DataBase = "QUANLYDOANHTHUDA";
-        string DataSource = "TP500LA";
+        string DataSource = @"DANDEPTRAI\SQLEXPRESS";
         
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu

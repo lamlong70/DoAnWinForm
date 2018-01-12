@@ -83,6 +83,10 @@ namespace PhanMemQuanLyDoanThu
 
         private void FormNhanvien_Load(object sender, EventArgs e)
         {
+            int witdhScreen = Screen.PrimaryScreen.WorkingArea.Width;
+            int heightScreen = Screen.PrimaryScreen.WorkingArea.Height;
+            this.Width = witdhScreen;
+            this.Height = heightScreen;
             setNull();
             setButton(true);
             HienThiNhanVien();
