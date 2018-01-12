@@ -15,6 +15,7 @@ namespace PhanMemQuanLyDoanThu
 {
     public partial class DangNhap : DevExpress.XtraEditors.XtraForm
     {
+        //public String conString = @"Data Source=DANDEPTRAI\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
         public String conString = @"Data Source=TP500LA;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
         NhanVien nv = new NhanVien();
         public DangNhap()
