@@ -49,6 +49,18 @@ namespace PhanMemQuanLyDoanThu
             SqlCommand sqlcmd = new SqlCommand(sql, sqlConn);
             sqlcmd.ExecuteNonQuery();
         }
+        public void RestoreDatabase(string link)
+        {
+            string strCnn = @"Data Source=" + DataSource + "; Database=" + DataBase + ";Integrated Security = True";
+            sqlConn = new SqlConnection(strCnn);
+            sqlConn.Open();
+            string sql = "ALTER DATABASE "+DataBase+" SET SINGLE_USER WITH ROLLBACK IMMEDIATE; ";
+            sql += "USE master; RESTORE DATABASE "+DataBase+" FROM DISK= '"+link+"' WITH REPLACE;";
+            SqlCommand sqlcmd = new SqlCommand(sql, sqlConn);
+            sqlcmd.ExecuteNonQuery();
+            sqlConn.Close();
+            sqlConn.Dispose();
+        }
        
     }
 }
