@@ -25,18 +25,14 @@ namespace PhanMemQuanLyDoanThu
         }
         public void ThemNhanVien(string tendn, string matkhau)
         {
-<<<<<<< HEAD
-            string strSQL = string.Format("Insert Into NHANVIEN  Values(N'{0}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'{1}','{2}')",tennv,tendn,matkhau);
-=======
+            //string strSQL = string.Format("Insert Into NHANVIEN  Values(N'{0}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'{1}','{2}')",tennv,tendn,matkhau);
+
             string strSQL = string.Format("Insert Into DANGKY  Values('{0}','{1}')",tendn,matkhau);
->>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
+
             db.ExecuteNonQuery(strSQL);
         }
         public void ThemNhanVienDS(string tennv,string ma_chucvu, string ma_bophan, string ngaysinh,string ngayvao, string dt, string gioitinh, string diachi)
         {
-<<<<<<< HEAD
-            //string strSQL = string.Format("")
-=======
             string strSQL = string.Format("Insert Into NHANVIEN Values(N'{0}','{1}','{2}','{3}','{4}','{5}',N'{6}',N'{7}')",tennv,ma_chucvu,ma_bophan,ngaysinh,ngayvao,dt,gioitinh,diachi);
             db.ExecuteNonQuery(strSQL);
         }
@@ -50,7 +46,6 @@ namespace PhanMemQuanLyDoanThu
         {
             string sql = "Delete from NHANVIEN where MANV = " +manv;
             db.ExecuteNonQuery(sql);
->>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
         }
         public DataTable LayBoPhan()
         {
@@ -64,8 +59,7 @@ namespace PhanMemQuanLyDoanThu
             DataTable dt = db.Execute(strSQL);
             return dt;
         }
-<<<<<<< HEAD
-=======
+
         public DataTable LayDSNhanvienBoPhan(string mabp)
         {
             string strSQL = string.Format("Select MANV, TENNV, TENCHUCVU,TENBOPHAN,NGAYSINH,NGAYVAOLAM,DIENTHOAI,GIOITINH,DIACHI From NHANVIEN A, CHUCVU B, BOPHAN C Where A.MACHUCVU=B.MACHUCVU AND A.MABOPHAN=C.MABOPHAN AND A.MABOPHAN = '{0}'",mabp);
@@ -73,7 +67,5 @@ namespace PhanMemQuanLyDoanThu
             //Goi phuong thuc truy xuat du lieu 
             return dt;
         }
-
->>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
     }
 }
