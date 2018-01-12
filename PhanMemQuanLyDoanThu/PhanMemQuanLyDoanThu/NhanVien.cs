@@ -25,7 +25,10 @@ namespace PhanMemQuanLyDoanThu
         }
         public void ThemNhanVien(string tendn, string matkhau)
         {
+            //string strSQL = string.Format("Insert Into NHANVIEN  Values(N'{0}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'{1}','{2}')",tennv,tendn,matkhau);
+
             string strSQL = string.Format("Insert Into DANGKY  Values('{0}','{1}')",tendn,matkhau);
+
             db.ExecuteNonQuery(strSQL);
         }
         public void ThemNhanVienDS(string tennv,string ma_chucvu, string ma_bophan, string ngaysinh,string ngayvao, string dt, string gioitinh, string diachi)
@@ -56,6 +59,7 @@ namespace PhanMemQuanLyDoanThu
             DataTable dt = db.Execute(strSQL);
             return dt;
         }
+
         public DataTable LayDSNhanvienBoPhan(string mabp)
         {
             string strSQL = string.Format("Select MANV, TENNV, TENCHUCVU,TENBOPHAN,NGAYSINH,NGAYVAOLAM,DIENTHOAI,GIOITINH,DIACHI From NHANVIEN A, CHUCVU B, BOPHAN C Where A.MACHUCVU=B.MACHUCVU AND A.MABOPHAN=C.MABOPHAN AND A.MABOPHAN = '{0}'",mabp);
@@ -63,6 +67,5 @@ namespace PhanMemQuanLyDoanThu
             //Goi phuong thuc truy xuat du lieu 
             return dt;
         }
-
     }
 }

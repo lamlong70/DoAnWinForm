@@ -58,6 +58,7 @@ namespace PhanMemQuanLyDoanThu
             cboChucVu.DisplayMember = "TENCHUCVU";
             cboChucVu.ValueMember = "MACHUCVU";
         }
+
         void HienGioiTinh()
         {
             cmbGioitinh.Items.Add("Nam");
@@ -92,9 +93,11 @@ namespace PhanMemQuanLyDoanThu
             HienThiNhanVien();
             HienBoPhan();
             HienChucVu();
+
             HienGioiTinh();
             AcceptButton = btnThem;
             txtHoten.Focus();
+
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -106,6 +109,7 @@ namespace PhanMemQuanLyDoanThu
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+
             txtHoten.Focus();
             if (lsvNhanVien.SelectedIndices.Count > 0)
             {
@@ -115,6 +119,29 @@ namespace PhanMemQuanLyDoanThu
             else
                 MessageBox.Show("Bạn phải chọn mẫu tin cập nhật", "Sửa mẫu tin");
         }
+        /*
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            setButton(true);
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            string ngaysinh = String.Format("{0:MM/dd/yyyy}", dtpNgaySinh.Value);
+            string ngaylam = String.Format("{0:MM/dd/yyyy}", dtpNgayLam.Value);
+            if (themmoi)
+            {
+                // nv.ThemNhanVien(txtHoten.Text, ngay, txtDiaChi.Text,txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
+                MessageBox.Show("Thêm mới thành công");
+            }
+            else
+            {
+                nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text, txtHoten.Text, ngay, txtDiaChi.Text, txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
+                MessageBox.Show("Cập nhật thành công");
+            }
+            HienThiNhanVien();
+            setNull();
+        }*/
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
