@@ -159,18 +159,21 @@ namespace PhanMemQuanLyDoanThu
             {
                 string BackupFile = dlg.SelectedPath;
                 db.BackupDatabase(BackupFile);
-                MessageBox.Show("Backup thành công", "Thành công");
+                MessageBox.Show("Sao lưu thành công", "Thành công");
             }
         }
 
         private void btnPhuchoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            Database db = new Database();
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.Filter = "Backup Files(*.bak)|*.bak|All Files(*.*)|*.*";
             dlg.FilterIndex = 0;
             if(dlg.ShowDialog()==DialogResult.OK)
             {
-
+                string BackupFile = dlg.FileName;
+                db.RestoreDatabase(BackupFile);
+                MessageBox.Show("Khôi phục thành công","Thành công");
             }
         }
     }
