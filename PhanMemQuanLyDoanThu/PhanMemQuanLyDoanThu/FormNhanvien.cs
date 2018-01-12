@@ -58,6 +58,11 @@ namespace PhanMemQuanLyDoanThu
             cboChucVu.DisplayMember = "TENCHUCVU";
             cboChucVu.ValueMember = "MACHUCVU";
         }
+<<<<<<< HEAD
+        void HienThiNhanVien()
+        {
+            //lsvNhanVien.Items.Clear();
+=======
         void HienGioiTinh()
         {
             cmbGioitinh.Items.Add("Nam");
@@ -66,6 +71,7 @@ namespace PhanMemQuanLyDoanThu
         void HienThiNhanVien()
         {
             lsvNhanVien.Items.Clear();
+>>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
             DataTable dt = nv.LayDSNhanvien();
             for(int i=0;i<dt.Rows.Count;i++)
             {
@@ -88,9 +94,12 @@ namespace PhanMemQuanLyDoanThu
             HienThiNhanVien();
             HienBoPhan();
             HienChucVu();
+<<<<<<< HEAD
+=======
             HienGioiTinh();
             AcceptButton = btnThem;
             txtHoten.Focus();
+>>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -102,7 +111,10 @@ namespace PhanMemQuanLyDoanThu
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
             txtHoten.Focus();
+>>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
             if (lsvNhanVien.SelectedIndices.Count > 0)
             {
                 themmoi = false;
@@ -111,6 +123,31 @@ namespace PhanMemQuanLyDoanThu
             else
                 MessageBox.Show("Bạn phải chọn mẫu tin cập nhật", "Sửa mẫu tin");
         }
+<<<<<<< HEAD
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            setButton(true);
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            string ngaysinh = String.Format("{0:MM/dd/yyyy}",dtpNgaySinh.Value);
+            string ngaylam = String.Format("{0:MM/dd/yyyy}", dtpNgayLam.Value);
+            if (themmoi)
+            {
+               // nv.ThemNhanVien(txtHoten.Text, ngay, txtDiaChi.Text,txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
+                MessageBox.Show("Thêm mới thành công");
+            }
+            else
+            {
+                nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text,txtHoten.Text, ngay, txtDiaChi.Text, txtDienThoai.Text, cboBangCap.SelectedValue.ToString());
+                MessageBox.Show("Cập nhật thành công");
+            }
+            HienthiNhanvien();
+            setNull();
+=======
+>>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
