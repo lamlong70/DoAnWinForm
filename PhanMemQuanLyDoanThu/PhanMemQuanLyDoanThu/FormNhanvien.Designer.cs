@@ -92,7 +92,6 @@
             this.groupBox1.Text = "Nhân Viên";
             // 
             // cboChucVu
-<<<<<<< HEAD
             // 
             this.cboChucVu.FormattingEnabled = true;
             this.cboChucVu.Location = new System.Drawing.Point(466, 152);
@@ -139,7 +138,6 @@
             this.dtpNgayLam.Name = "dtpNgayLam";
             this.dtpNgayLam.Size = new System.Drawing.Size(200, 23);
             this.dtpNgayLam.TabIndex = 3;
-=======
             // 
             this.cboChucVu.FormattingEnabled = true;
             this.cboChucVu.Location = new System.Drawing.Point(466, 152);
@@ -147,11 +145,9 @@
             this.cboChucVu.Size = new System.Drawing.Size(157, 24);
             this.cboChucVu.TabIndex = 8;
             this.cboChucVu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboChucVu_KeyPress);
->>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
             // 
             // cboBoPhan
             // 
-<<<<<<< HEAD
             this.cmbGioitinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
@@ -160,7 +156,6 @@
             this.cmbGioitinh.Size = new System.Drawing.Size(157, 24);
             this.cmbGioitinh.TabIndex = 2;
             // 
-=======
             this.cboBoPhan.FormattingEnabled = true;
             this.cboBoPhan.Location = new System.Drawing.Point(466, 110);
             this.cboBoPhan.Name = "cboBoPhan";
@@ -208,15 +203,12 @@
             this.cmbGioitinh.TabIndex = 6;
             this.cmbGioitinh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbGioitinh_KeyPress);
             // 
->>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
             // txtDienThoai
             // 
             this.txtDienThoai.Location = new System.Drawing.Point(466, 26);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(157, 23);
-<<<<<<< HEAD
             this.txtDienThoai.TabIndex = 1;
-=======
             this.txtDienThoai.TabIndex = 5;
             // 
             // txtDiachi
@@ -225,7 +217,6 @@
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(200, 23);
             this.txtDiachi.TabIndex = 2;
->>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
             // 
             // txtDiachi
             // 
@@ -326,10 +317,7 @@
             this.lsvNhanVien.TabIndex = 0;
             this.lsvNhanVien.UseCompatibleStateImageBehavior = false;
             this.lsvNhanVien.View = System.Windows.Forms.View.Details;
-<<<<<<< HEAD
-=======
             this.lsvNhanVien.SelectedIndexChanged += new System.EventHandler(this.lsvNhanVien_SelectedIndexChanged);
->>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
             // 
             // clmMaNV
             // 
@@ -426,11 +414,8 @@
             this.btnHuy.Location = new System.Drawing.Point(716, 205);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 36);
-<<<<<<< HEAD
             this.btnHuy.TabIndex = 8;
-=======
             this.btnHuy.TabIndex = 13;
->>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);

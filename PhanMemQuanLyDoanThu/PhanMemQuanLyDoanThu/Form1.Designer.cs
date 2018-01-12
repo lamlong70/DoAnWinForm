@@ -67,6 +67,8 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -91,11 +93,6 @@
             this.ribbonPage7 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup13 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbSStatus = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-<<<<<<< HEAD
-=======
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
->>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -402,10 +399,7 @@
             this.btnKho.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKho.ImageOptions.Image")));
             this.btnKho.Name = "btnKho";
             this.btnKho.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-<<<<<<< HEAD
-=======
             this.btnKho.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKho_ItemClick);
->>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
             // 
             // btnQuanlykho
             // 
@@ -454,6 +448,18 @@
             this.barButtonItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
             this.barButtonItem6.Name = "barButtonItem6";
             this.barButtonItem6.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barButtonItem7
+            // 
+            this.barButtonItem7.Caption = "barButtonItem7";
+            this.barButtonItem7.Id = 41;
+            this.barButtonItem7.Name = "barButtonItem7";
+            // 
+            // barButtonItem8
+            // 
+            this.barButtonItem8.Caption = "barButtonItem8";
+            this.barButtonItem8.Id = 42;
+            this.barButtonItem8.Name = "barButtonItem8";
             // 
             // ribbonPage1
             // 
@@ -622,31 +628,11 @@
             this.ribbonPageGroup13.Text = "ribbonPageGroup13";
             // 
             // rbSStatus
-<<<<<<< HEAD
             // 
             this.rbSStatus.Location = new System.Drawing.Point(1, 275);
             this.rbSStatus.Name = "rbSStatus";
             this.rbSStatus.Ribbon = this.ribbonControl1;
             this.rbSStatus.Size = new System.Drawing.Size(751, 27);
-=======
-            // 
-            this.rbSStatus.Location = new System.Drawing.Point(1, 275);
-            this.rbSStatus.Name = "rbSStatus";
-            this.rbSStatus.Ribbon = this.ribbonControl1;
-            this.rbSStatus.Size = new System.Drawing.Size(751, 27);
-            // 
-            // barButtonItem7
-            // 
-            this.barButtonItem7.Caption = "barButtonItem7";
-            this.barButtonItem7.Id = 41;
-            this.barButtonItem7.Name = "barButtonItem7";
-            // 
-            // barButtonItem8
-            // 
-            this.barButtonItem8.Caption = "barButtonItem8";
-            this.barButtonItem8.Id = 42;
-            this.barButtonItem8.Name = "barButtonItem8";
->>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
             // 
             // frmMain
             // 
