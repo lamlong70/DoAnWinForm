@@ -1,2 +1,2 @@
 # DoAnWinform
-Do an lap trinh Windown Form
+Đồ án môn học lập trình Windowns Form

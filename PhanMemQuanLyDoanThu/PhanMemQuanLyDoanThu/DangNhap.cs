@@ -30,6 +30,7 @@ namespace PhanMemQuanLyDoanThu
         private void hyperlinkLabelControl1_Click(object sender, EventArgs e)
         {
             Form dangky = new DangKy();
+            Hide();
             dangky.Show();
         }
 
@@ -42,13 +43,14 @@ namespace PhanMemQuanLyDoanThu
                 e.Cancel = true;
             }
         }
-
+        
         private void btnOk_Click(object sender, EventArgs e)
         {
+
             using (SqlConnection sqlCon = new SqlConnection(conString))
             {
                 sqlCon.Open();
-                SqlCommand cmd = new SqlCommand(@"SELECT Count(*) FROM NHANVIEN 
+                SqlCommand cmd = new SqlCommand(@"SELECT Count(*) FROM DANGKY
                                         WHERE TENDANGNHAP=@uname and 
                                         MATKHAU=@pass",sqlCon);
                 cmd.Parameters.AddWithValue("@uname", txtTendn.Text);
@@ -57,16 +59,28 @@ namespace PhanMemQuanLyDoanThu
                 if (result > 0)
                 {
                     MessageBox.Show("Đăng nhập thành công");
+<<<<<<< HEAD
                     Close();
+=======
+                    frmMain Child = new frmMain();
+                    Child.setButton(true);
+                    Child.Show();
+                    this.Hide();
+>>>>>>> 8334b33d1542c16012334ab1c9a2651242bd13bc
                 }
                 else
+                {
                     MessageBox.Show("Đăng nhập thất bại");
+                }
+
             }
         }
-
+        
         private void DangNhap_Load(object sender, EventArgs e)
         {
             AcceptButton = btnOk;
         }
+
+      
     }
 }
