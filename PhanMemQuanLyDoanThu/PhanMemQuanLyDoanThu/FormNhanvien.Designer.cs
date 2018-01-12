@@ -57,11 +57,12 @@
             this.clmDiachi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -87,7 +88,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(29, 42);
+            this.groupBox1.Location = new System.Drawing.Point(32, 42);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(670, 226);
             this.groupBox1.TabIndex = 0;
@@ -101,63 +102,9 @@
             this.cboChucVu.Name = "cboChucVu";
             this.cboChucVu.Size = new System.Drawing.Size(157, 24);
             this.cboChucVu.TabIndex = 8;
-            // 
-            // cboBoPhan
-            // 
-            this.cboBoPhan.FormattingEnabled = true;
-            this.cboBoPhan.Location = new System.Drawing.Point(466, 110);
-            this.cboBoPhan.Name = "cboBoPhan";
-            this.cboBoPhan.Size = new System.Drawing.Size(157, 24);
-            this.cboBoPhan.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(386, 158);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 16);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Chức Vụ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(386, 118);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 16);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Bộ Phận";
-            // 
-            // dtpNgaySinh
-            // 
-            this.dtpNgaySinh.Location = new System.Drawing.Point(157, 116);
-            this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 23);
-            this.dtpNgaySinh.TabIndex = 4;
-            // 
-            // dtpNgayLam
-            // 
-            this.dtpNgayLam.Location = new System.Drawing.Point(157, 157);
-            this.dtpNgayLam.Name = "dtpNgayLam";
-            this.dtpNgayLam.Size = new System.Drawing.Size(200, 23);
-            this.dtpNgayLam.TabIndex = 3;
-            // 
-            this.cboChucVu.FormattingEnabled = true;
-            this.cboChucVu.Location = new System.Drawing.Point(466, 152);
-            this.cboChucVu.Name = "cboChucVu";
-            this.cboChucVu.Size = new System.Drawing.Size(157, 24);
-            this.cboChucVu.TabIndex = 8;
             this.cboChucVu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cboChucVu_KeyPress);
             // 
             // cboBoPhan
-            // 
-            this.cmbGioitinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cmbGioitinh.Location = new System.Drawing.Point(466, 73);
-            this.cmbGioitinh.Name = "cmbGioitinh";
-            this.cmbGioitinh.Size = new System.Drawing.Size(157, 24);
-            this.cmbGioitinh.TabIndex = 2;
             // 
             this.cboBoPhan.FormattingEnabled = true;
             this.cboBoPhan.Location = new System.Drawing.Point(466, 110);
@@ -200,6 +147,9 @@
             // 
             // cmbGioitinh
             // 
+            this.cmbGioitinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cmbGioitinh.Location = new System.Drawing.Point(466, 73);
             this.cmbGioitinh.Name = "cmbGioitinh";
             this.cmbGioitinh.Size = new System.Drawing.Size(157, 24);
@@ -211,15 +161,7 @@
             this.txtDienThoai.Location = new System.Drawing.Point(466, 26);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(157, 23);
-            this.txtDienThoai.TabIndex = 1;
             this.txtDienThoai.TabIndex = 5;
-            // 
-            // txtDiachi
-            // 
-            this.txtDiachi.Location = new System.Drawing.Point(157, 73);
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(200, 23);
-            this.txtDiachi.TabIndex = 2;
             // 
             // txtDiachi
             // 
@@ -306,7 +248,7 @@
             this.lsvNhanVien.GridLines = true;
             this.lsvNhanVien.Location = new System.Drawing.Point(3, 19);
             this.lsvNhanVien.Name = "lsvNhanVien";
-            this.lsvNhanVien.Size = new System.Drawing.Size(859, 192);
+            this.lsvNhanVien.Size = new System.Drawing.Size(860, 192);
             this.lsvNhanVien.TabIndex = 0;
             this.lsvNhanVien.UseCompatibleStateImageBehavior = false;
             this.lsvNhanVien.View = System.Windows.Forms.View.Details;
@@ -363,9 +305,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.lsvNhanVien);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(29, 287);
+            this.groupBox2.Location = new System.Drawing.Point(32, 287);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(865, 214);
+            this.groupBox2.Size = new System.Drawing.Size(866, 214);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Sản Phẩm";
@@ -381,21 +323,9 @@
             this.groupControl1.Controls.Add(this.btnThem);
             this.groupControl1.Location = new System.Drawing.Point(729, 42);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(162, 226);
+            this.groupControl1.Size = new System.Drawing.Size(163, 226);
             this.groupControl1.TabIndex = 8;
             this.groupControl1.Text = "Điều Chỉnh";
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHuy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(34, 182);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(95, 28);
-            this.btnHuy.TabIndex = 18;
-            this.btnHuy.Text = "Huỷ";
-            this.btnHuy.UseVisualStyleBackColor = true;
             // 
             // btnLuu
             // 
@@ -404,10 +334,11 @@
             this.btnLuu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Location = new System.Drawing.Point(34, 141);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(95, 28);
+            this.btnLuu.Size = new System.Drawing.Size(96, 28);
             this.btnLuu.TabIndex = 17;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -416,10 +347,11 @@
             this.btnSua.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Location = new System.Drawing.Point(34, 99);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(95, 28);
+            this.btnSua.Size = new System.Drawing.Size(96, 28);
             this.btnSua.TabIndex = 16;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -428,40 +360,50 @@
             this.btnXoa.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(34, 60);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(95, 28);
+            this.btnXoa.Size = new System.Drawing.Size(96, 28);
             this.btnXoa.TabIndex = 15;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
-<<<<<<< HEAD
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Location = new System.Drawing.Point(34, 23);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(95, 28);
+            this.btnThem.Size = new System.Drawing.Size(96, 28);
             this.btnThem.TabIndex = 14;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-=======
-            this.btnHuy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(716, 205);
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(34, 175);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(95, 32);
+            this.simpleButton1.TabIndex = 18;
+            this.simpleButton1.Text = "Huỷ";
+            this.simpleButton1.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuy.Location = new System.Drawing.Point(34, 175);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 36);
-            this.btnHuy.TabIndex = 8;
-            this.btnHuy.TabIndex = 13;
+            this.btnHuy.Size = new System.Drawing.Size(96, 31);
+            this.btnHuy.TabIndex = 18;
             this.btnHuy.Text = "Huỷ";
-            this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
->>>>>>> 22c18f9e2d1d6ebfb6372248ee2e47b18065cd52
             // 
             // FormNhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 513);
+            this.ClientSize = new System.Drawing.Size(925, 513);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -511,10 +453,11 @@
         private System.Windows.Forms.ColumnHeader clmDiachi;
         private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnHuy;
     }
 }
