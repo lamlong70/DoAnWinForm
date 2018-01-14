@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLuong = new System.Windows.Forms.TextBox();
             this.lsvLuongNV = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -107,7 +107,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtLuong);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtHoten);
             this.groupBox1.Controls.Add(this.cboChucVu);
@@ -131,12 +131,12 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Lương";
             // 
-            // textBox1
+            // txtLuong
             // 
-            this.textBox1.Location = new System.Drawing.Point(95, 146);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
-            this.textBox1.TabIndex = 16;
+            this.txtLuong.Location = new System.Drawing.Point(95, 146);
+            this.txtLuong.Name = "txtLuong";
+            this.txtLuong.Size = new System.Drawing.Size(157, 20);
+            this.txtLuong.TabIndex = 16;
             // 
             // lsvLuongNV
             // 
@@ -155,6 +155,7 @@
             this.lsvLuongNV.TabIndex = 16;
             this.lsvLuongNV.UseCompatibleStateImageBehavior = false;
             this.lsvLuongNV.View = System.Windows.Forms.View.Details;
+            this.lsvLuongNV.SelectedIndexChanged += new System.EventHandler(this.lsvLuongNV_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -187,6 +188,7 @@
             this.btnSua.TabIndex = 0;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnLuu
             // 
@@ -205,6 +207,7 @@
             this.btnKhongLuu.TabIndex = 2;
             this.btnKhongLuu.Text = "Không lưu";
             this.btnKhongLuu.UseVisualStyleBackColor = true;
+            this.btnKhongLuu.Click += new System.EventHandler(this.btnKhongLuu_Click);
             // 
             // btnThoat
             // 
@@ -214,6 +217,7 @@
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // columnHeader1
             // 
@@ -273,7 +277,7 @@
         private System.Windows.Forms.TextBox txtHoten;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLuong;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListView lsvLuongNV;
         private System.Windows.Forms.ColumnHeader columnHeader1;
