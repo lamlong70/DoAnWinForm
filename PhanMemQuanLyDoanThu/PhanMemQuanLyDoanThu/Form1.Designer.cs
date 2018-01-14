@@ -303,6 +303,7 @@
             this.btnLuong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuong.ImageOptions.Image")));
             this.btnLuong.Name = "btnLuong";
             this.btnLuong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnLuong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLuong_ItemClick);
             // 
             // btnVatlieu
             // 

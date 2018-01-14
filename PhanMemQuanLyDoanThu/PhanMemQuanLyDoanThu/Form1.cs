@@ -176,5 +176,18 @@ namespace PhanMemQuanLyDoanThu
                 MessageBox.Show("Khôi phục thành công","Thành công");
             }
         }
+
+        private void btnLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "LuongNV")
+                {
+                    f.Activate();
+                    return;
+                }
+            LuongNV bp = new LuongNV();
+            bp.MdiParent = this;
+            bp.Show();
+        }
     }
 }
