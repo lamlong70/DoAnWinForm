@@ -50,6 +50,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -141,6 +142,7 @@
             // lsvLuongNV
             // 
             this.lsvLuongNV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -198,6 +200,7 @@
             this.btnLuu.TabIndex = 1;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnKhongLuu
             // 
@@ -222,7 +225,7 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Họ tên";
-            this.columnHeader1.Width = 130;
+            this.columnHeader1.Width = 100;
             // 
             // columnHeader2
             // 
@@ -248,6 +251,10 @@
             // 
             this.columnHeader6.Text = "Tổng";
             this.columnHeader6.Width = 100;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Mã NV";
             // 
             // LuongNV
             // 
@@ -292,5 +299,6 @@
         private System.Windows.Forms.Button btnKhongLuu;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
     }
 }

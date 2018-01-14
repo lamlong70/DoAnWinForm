@@ -12,6 +12,7 @@ namespace PhanMemQuanLyDoanThu
 {
     public partial class LuongNV : Form
     {
+        bool themmoi = true;
         NhanVien nv = new NhanVien();
         public LuongNV()
         {
@@ -29,6 +30,7 @@ namespace PhanMemQuanLyDoanThu
                 lvi.SubItems.Add(dt.Rows[i][3].ToString());
                 lvi.SubItems.Add(dt.Rows[i][4].ToString());
                 lvi.SubItems.Add(dt.Rows[i][5].ToString());
+                lvi.SubItems.Add(dt.Rows[i][6].ToString());
             }
         }
         void setNull()
@@ -96,16 +98,28 @@ namespace PhanMemQuanLyDoanThu
         {
             if (lsvLuongNV.SelectedIndices.Count > 0)
             {
-                txtHoten.Text = lsvLuongNV.SelectedItems[0].SubItems[0].Text;
-                cboBoPhan.SelectedIndex = cboBoPhan.FindString(lsvLuongNV.SelectedItems[0].SubItems[1].Text);
-                cboChucVu.SelectedIndex = cboChucVu.FindString(lsvLuongNV.SelectedItems[0].SubItems[2].Text);               
-                txtLuong.Text = lsvLuongNV.SelectedItems[0].SubItems[3].Text;
+                txtHoten.Text = lsvLuongNV.SelectedItems[0].SubItems[1].Text;
+                cboBoPhan.SelectedIndex = cboBoPhan.FindString(lsvLuongNV.SelectedItems[0].SubItems[2].Text);
+                cboChucVu.SelectedIndex = cboChucVu.FindString(lsvLuongNV.SelectedItems[0].SubItems[3].Text);               
+                txtLuong.Text = lsvLuongNV.SelectedItems[0].SubItems[4].Text;
             }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if (themmoi)
+            {
+                nv.ThemLuong(lsvLuongNV.SelectedItems[0].SubItems[0].Text,txtLuong.Text);
+                MessageBox.Show("Thêm thành công");
+                setButton(true);
+            }
+            HienThiLuongNV();
+            setNull();
         }
     }
 }
