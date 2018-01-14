@@ -44,7 +44,7 @@ namespace PhanMemQuanLyDoanThu
             btnHuy.Enabled = !val;
         }
 
-            void HienBoPhan()
+        void HienBoPhan()
         {
             DataTable dt = nv.LayBoPhan();
             cboBoPhan.DataSource = dt;
