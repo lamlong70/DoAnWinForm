@@ -12,7 +12,7 @@ namespace PhanMemQuanLyDoanThu
     {
         string DataBase = "QUANLYDOANHTHUDA";
         //string DataSource = @"DANDEPTRAI\SQLEXPRESS";
-        string DataSource = @"Quan\SQLExpress";
+        string DataSource = @"TP500LA";
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
