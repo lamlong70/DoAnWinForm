@@ -12,7 +12,7 @@ namespace PhanMemQuanLyDoanThu
     {
         string DataBase = "QUANLYDOANHTHUDA";
         //string DataSource = @"DANDEPTRAI\SQLEXPRESS";
-        string DataSource = @"TP500LA";
+        string DataSource = @"Quan\SQLExpress";
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
@@ -46,13 +46,14 @@ namespace PhanMemQuanLyDoanThu
             string sql = "BACKUP DATABASE " + DataBase + " TO DISK = '" + Link + "\\"+DataBase+"-"+DateTime.Now.Ticks.ToString()+".bak'";
             SqlCommand sqlcmd = new SqlCommand(sql, sqlConn);
             sqlcmd.ExecuteNonQuery();
+            //sqlConn.Close();
         }
         public void RestoreDatabase(string link)
         {
             string strCnn = @"Data Source=" + DataSource + "; Database=" + DataBase + ";Integrated Security = True";
             sqlConn = new SqlConnection(strCnn);
             sqlConn.Open();
-            string sql = "ALTER DATABASE "+DataBase+" SET SINGLE_USER WITH ROLLBACK IMMEDIATE; ";
+            string sql = "ALTER DATABASE "+DataBase+ " SET SINGLE_USER WITH ROLLBACK IMMEDIATE; ";
             sql += "USE master; RESTORE DATABASE "+DataBase+" FROM DISK= '"+link+"' WITH REPLACE;";
             SqlCommand sqlcmd = new SqlCommand(sql, sqlConn);
             sqlcmd.ExecuteNonQuery();
