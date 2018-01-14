@@ -189,5 +189,18 @@ namespace PhanMemQuanLyDoanThu
             bp.MdiParent = this;
             bp.Show();
         }
+
+        private void btnChucvu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "ChucVu")
+                {
+                    f.Activate();
+                    return;
+                }
+            ChucVu bp = new ChucVu();
+            bp.MdiParent = this;
+            bp.Show();
+        }
     }
 }

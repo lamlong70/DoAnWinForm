@@ -256,6 +256,7 @@
             this.btnChucvu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnChucvu.ImageOptions.Image")));
             this.btnChucvu.Name = "btnChucvu";
             this.btnChucvu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnChucvu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnChucvu_ItemClick);
             // 
             // btnBophan
             // 
