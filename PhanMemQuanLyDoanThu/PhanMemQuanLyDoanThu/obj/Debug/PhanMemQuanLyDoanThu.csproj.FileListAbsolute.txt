@@ -119,3 +119,4 @@ D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLy
 >>>>>>> Dan
 D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.LuongNV.resources
 D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.ChiPhiVatLieu.resources
+D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.ChucVu.resources

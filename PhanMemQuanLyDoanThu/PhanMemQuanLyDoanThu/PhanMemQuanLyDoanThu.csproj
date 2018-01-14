@@ -64,6 +64,12 @@
     <Compile Include="ChiPhiVatLieu.Designer.cs">
       <DependentUpon>ChiPhiVatLieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChucVu.Designer.cs">
+      <DependentUpon>ChucVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChiPhiVatLieu.resx">
       <DependentUpon>ChiPhiVatLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChucVu.resx">
+      <DependentUpon>ChucVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
