@@ -28,9 +28,9 @@ namespace PhanMemQuanLyDoanThu
                 lvi.SubItems.Add(dt.Rows[i][1].ToString());
                 lvi.SubItems.Add(dt.Rows[i][2].ToString());
                 lvi.SubItems.Add(dt.Rows[i][3].ToString());
-                lvi.SubItems.Add(dt.Rows[i][4].ToString());
-                lvi.SubItems.Add(dt.Rows[i][5].ToString());
-                lvi.SubItems.Add(dt.Rows[i][6].ToString());
+                lvi.SubItems.Add(dt.Rows[i][4].ToString()+" VNĐ");
+                lvi.SubItems.Add(dt.Rows[i][5].ToString()+" VNĐ");
+                lvi.SubItems.Add(dt.Rows[i][6].ToString()+" VNĐ");
             }
         }
         void setNull()
@@ -69,6 +69,10 @@ namespace PhanMemQuanLyDoanThu
         private void LuongNV_Load(object sender, EventArgs e)
         {
             //setNull();
+            int witdhScreen = Screen.PrimaryScreen.WorkingArea.Width;
+            int heightScreen = Screen.PrimaryScreen.WorkingArea.Height;
+            this.Width = witdhScreen;
+            this.Height = heightScreen;
             AcceptButton = btnSua;
             setButton(true);
             setButtonDis(true);

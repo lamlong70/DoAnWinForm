@@ -43,11 +43,16 @@
             this.clmGioitinh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmDiachi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(194, 70);
@@ -58,6 +63,8 @@
             // 
             // cboBoPhan
             // 
+            this.cboBoPhan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cboBoPhan.FormattingEnabled = true;
             this.cboBoPhan.Location = new System.Drawing.Point(310, 70);
             this.cboBoPhan.Name = "cboBoPhan";
@@ -67,10 +74,12 @@
             // 
             // btnXem
             // 
+            this.btnXem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXem.Location = new System.Drawing.Point(518, 67);
+            this.btnXem.Location = new System.Drawing.Point(22, 14);
             this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(75, 23);
+            this.btnXem.Size = new System.Drawing.Size(78, 33);
             this.btnXem.TabIndex = 2;
             this.btnXem.Text = "Xem";
             this.btnXem.UseVisualStyleBackColor = true;
@@ -78,6 +87,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.lsvNhanVien);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(24, 122);
@@ -89,6 +101,9 @@
             // 
             // lsvNhanVien
             // 
+            this.lsvNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lsvNhanVien.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmMaNV,
             this.clmTen,
@@ -121,22 +136,22 @@
             // clmChucVu
             // 
             this.clmChucVu.Text = "Chức Vụ";
-            this.clmChucVu.Width = 70;
+            this.clmChucVu.Width = 100;
             // 
             // clmBoPhan
             // 
             this.clmBoPhan.Text = "Bộ Phận";
-            this.clmBoPhan.Width = 70;
+            this.clmBoPhan.Width = 100;
             // 
             // clmNgaysinh
             // 
             this.clmNgaysinh.Text = "Ngày Sinh";
-            this.clmNgaysinh.Width = 100;
+            this.clmNgaysinh.Width = 150;
             // 
             // clmNgayvao
             // 
             this.clmNgayvao.Text = "Ngày Vào";
-            this.clmNgayvao.Width = 100;
+            this.clmNgayvao.Width = 150;
             // 
             // clmDienthoai
             // 
@@ -155,6 +170,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
@@ -164,6 +182,27 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Thông Tin Bộ Phận";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnXem);
+            this.groupBox1.Location = new System.Drawing.Point(512, 44);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(124, 57);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Location = new System.Drawing.Point(181, 44);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(289, 57);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Chọn bộ phận";
+            // 
             // Bophan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -171,13 +210,17 @@
             this.ClientSize = new System.Drawing.Size(815, 415);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btnXem);
             this.Controls.Add(this.cboBoPhan);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Bophan";
-            this.Text = "Bophan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Thông tin bộ phận";
             this.Load += new System.EventHandler(this.Bophan_Load);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +243,7 @@
         private System.Windows.Forms.ColumnHeader clmGioitinh;
         private System.Windows.Forms.ColumnHeader clmDiachi;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }
