@@ -83,6 +83,12 @@
     <Compile Include="FormNhanvien.Designer.cs">
       <DependentUpon>FormNhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="LuongNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LuongNV.Designer.cs">
+      <DependentUpon>LuongNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhanvien.resx">
       <DependentUpon>FormNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuongNV.resx">
+      <DependentUpon>LuongNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
