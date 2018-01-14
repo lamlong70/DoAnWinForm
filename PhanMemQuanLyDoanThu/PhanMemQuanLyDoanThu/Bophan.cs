@@ -27,6 +27,10 @@ namespace PhanMemQuanLyDoanThu
         }
         private void Bophan_Load(object sender, EventArgs e)
         {
+            int witdhScreen = Screen.PrimaryScreen.WorkingArea.Width;
+            int heightScreen = Screen.PrimaryScreen.WorkingArea.Height;
+            this.Width = witdhScreen;
+            this.Height = heightScreen;
             HienBoPhan();
             AcceptButton = btnXem;
         }
@@ -42,7 +46,7 @@ namespace PhanMemQuanLyDoanThu
                 lvi.SubItems.Add(dt.Rows[i][3].ToString());
                 lvi.SubItems.Add(dt.Rows[i][4].ToString());
                 lvi.SubItems.Add(dt.Rows[i][5].ToString());
-                lvi.SubItems.Add(dt.Rows[i][6].ToString());
+                lvi.SubItems.Add('0'+dt.Rows[i][6].ToString());
                 lvi.SubItems.Add(dt.Rows[i][7].ToString());
                 lvi.SubItems.Add(dt.Rows[i][8].ToString());
             }
