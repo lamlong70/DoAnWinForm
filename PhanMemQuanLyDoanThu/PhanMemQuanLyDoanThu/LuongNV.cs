@@ -31,6 +31,25 @@ namespace PhanMemQuanLyDoanThu
                 lvi.SubItems.Add(dt.Rows[i][5].ToString());
             }
         }
+        void setNull()
+        {
+            txtHoten.Text = "";
+            txtLuong.Text = "";
+        }
+        void setButtonDis(bool val)
+        {
+            txtHoten.Enabled = !val;
+            cboBoPhan.Enabled = !val;
+            cboChucVu.Enabled = !val;
+
+        }
+        void setButton(bool val)
+        {
+            txtLuong.Enabled = !val;
+            btnSua.Enabled = val;
+            btnLuu.Enabled = !val;
+            btnKhongLuu.Enabled = !val;
+        }
         void HienBoPhan()
         {
             DataTable dt = nv.LayBoPhan();
@@ -47,9 +66,46 @@ namespace PhanMemQuanLyDoanThu
         }
         private void LuongNV_Load(object sender, EventArgs e)
         {
+            //setNull();
+            AcceptButton = btnSua;
+            setButton(true);
+            setButtonDis(true);
             HienBoPhan();
             HienChucVu();
             HienThiLuongNV();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            txtLuong.Focus();
+            if (lsvLuongNV.SelectedIndices.Count > 0)
+            {
+                setButton(false);
+                AcceptButton = btnLuu;
+            }
+            else
+                MessageBox.Show("Bạn phải chọn mẫu tin cập nhật", "Sửa mẫu tin");
+        }
+
+        private void btnKhongLuu_Click(object sender, EventArgs e)
+        {
+            setButton(true);
+        }
+
+        private void lsvLuongNV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lsvLuongNV.SelectedIndices.Count > 0)
+            {
+                txtHoten.Text = lsvLuongNV.SelectedItems[0].SubItems[0].Text;
+                cboBoPhan.SelectedIndex = cboBoPhan.FindString(lsvLuongNV.SelectedItems[0].SubItems[1].Text);
+                cboChucVu.SelectedIndex = cboChucVu.FindString(lsvLuongNV.SelectedItems[0].SubItems[2].Text);               
+                txtLuong.Text = lsvLuongNV.SelectedItems[0].SubItems[3].Text;
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

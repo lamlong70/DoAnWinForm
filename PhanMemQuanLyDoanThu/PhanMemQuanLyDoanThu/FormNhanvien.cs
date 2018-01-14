@@ -93,7 +93,6 @@ namespace PhanMemQuanLyDoanThu
             HienThiNhanVien();
             HienBoPhan();
             HienChucVu();
-
             HienGioiTinh();
             AcceptButton = btnThem;
             txtHoten.Focus();
