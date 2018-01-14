@@ -67,5 +67,12 @@ namespace PhanMemQuanLyDoanThu
             //Goi phuong thuc truy xuat du lieu 
             return dt;
         }
+
+        public DataTable HienThiLuongNV()
+        {
+            string strSQL = string.Format("SELECT TENNV,A.MABOPHAN,A.MACHUCVU,LUONGCOBAN,PHUCAP,LUONGCOBAN+PHUCAP AS TONG FROM NHANVIEN A,BOPHAN B,CHUCVU C, LUONG D WHERE A.MANV=D.MANV AND A.MABOPHAN = B.MABOPHAN AND A.MACHUCVU=C.MACHUCVU");
+            DataTable dt = db.Execute(strSQL);
+            return dt;
+        }
     }
 }

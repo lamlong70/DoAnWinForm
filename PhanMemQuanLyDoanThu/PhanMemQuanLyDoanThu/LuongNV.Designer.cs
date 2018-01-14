@@ -37,7 +37,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lsvLuongNV = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnSua = new System.Windows.Forms.Button();
@@ -138,27 +138,27 @@
             this.textBox1.Size = new System.Drawing.Size(157, 20);
             this.textBox1.TabIndex = 16;
             // 
-            // listView1
+            // lsvLuongNV
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lsvLuongNV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(18, 19);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(582, 152);
-            this.listView1.TabIndex = 16;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lsvLuongNV.FullRowSelect = true;
+            this.lsvLuongNV.GridLines = true;
+            this.lsvLuongNV.Location = new System.Drawing.Point(18, 19);
+            this.lsvLuongNV.Name = "lsvLuongNV";
+            this.lsvLuongNV.Size = new System.Drawing.Size(582, 152);
+            this.lsvLuongNV.TabIndex = 16;
+            this.lsvLuongNV.UseCompatibleStateImageBehavior = false;
+            this.lsvLuongNV.View = System.Windows.Forms.View.Details;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.listView1);
+            this.groupBox2.Controls.Add(this.lsvLuongNV);
             this.groupBox2.Location = new System.Drawing.Point(23, 222);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(619, 177);
@@ -255,6 +255,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "LuongNV";
             this.Text = "LuongNV";
+            this.Load += new System.EventHandler(this.LuongNV_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -274,7 +275,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lsvLuongNV;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
