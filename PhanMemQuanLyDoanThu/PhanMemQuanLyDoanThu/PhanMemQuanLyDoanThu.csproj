@@ -58,6 +58,12 @@
     <Compile Include="Bophan.Designer.cs">
       <DependentUpon>Bophan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChiPhiVatLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiPhiVatLieu.Designer.cs">
+      <DependentUpon>ChiPhiVatLieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="Bophan.resx">
       <DependentUpon>Bophan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiPhiVatLieu.resx">
+      <DependentUpon>ChiPhiVatLieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>

@@ -118,3 +118,4 @@ D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLy
 D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.pdb
 >>>>>>> Dan
 D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.LuongNV.resources
+D:\DoAnWinform\PhanMemQuanLyDoanThu\PhanMemQuanLyDoanThu\obj\Debug\PhanMemQuanLyDoanThu.ChiPhiVatLieu.resources

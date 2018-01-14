@@ -52,7 +52,7 @@ namespace PhanMemQuanLyDoanThu
                 lvi.SubItems.Add(dt.Rows[i][1].ToString());
                 lvi.SubItems.Add(dt.Rows[i][2].ToString());
                 lvi.SubItems.Add(dt.Rows[i][3].ToString());
-                lvi.SubItems.Add(dt.Rows[i][4].ToString());
+                lvi.SubItems.Add(dt.Rows[i][4].ToString()+ " VNĐ");
                 lvi.SubItems.Add(dt.Rows[i][5].ToString());
                 }
         }
