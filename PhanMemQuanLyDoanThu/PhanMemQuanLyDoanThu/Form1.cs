@@ -202,5 +202,18 @@ namespace PhanMemQuanLyDoanThu
             bp.MdiParent = this;
             bp.Show();
         }
+
+        private void btnVatlieu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "ChiPhiVatLieu")
+                {
+                    f.Activate();
+                    return;
+                }
+            ChiPhiVatLieu bp = new ChiPhiVatLieu();
+            bp.MdiParent = this;
+            bp.Show();
+        }
     }
 }

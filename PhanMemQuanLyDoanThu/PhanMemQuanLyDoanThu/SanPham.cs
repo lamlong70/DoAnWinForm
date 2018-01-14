@@ -38,5 +38,20 @@ namespace PhanMemQuanLyDoanThu
             string sql = "Delete from SANPHAM where MASP = '"+masp+"'";
             db.ExecuteNonQuery(sql);
         }
+        public DataTable HienChiPhiVatLieu(string thang, string nam)
+        {
+            string sql = string.Format("Select TENSP, NGAYNHAP,GIA from SANPHAM where MONTH(NGAYNHAP)='{0}' AND YEAR(NGAYNHAP)='{1}'",thang,nam);
+            return db.Execute(sql);
+        }
+        public DataTable HienThang()
+        {
+            string sql = "SELECT MONTH(NGAYNHAP) AS [NGAYNHAP] FROM SANPHAM GROUP BY MONTH(NGAYNHAP)";
+            return db.Execute(sql);
+        }
+        public DataTable HienNam()
+        {
+            string sql = "SELECT YEAR(NGAYNHAP) AS [NAMNHAP] FROM SANPHAM GROUP BY YEAR(NGAYNHAP)";
+            return db.Execute(sql);
+        }
     }
 }

@@ -313,6 +313,7 @@
             this.btnVatlieu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVatlieu.ImageOptions.Image")));
             this.btnVatlieu.Name = "btnVatlieu";
             this.btnVatlieu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnVatlieu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnVatlieu_ItemClick);
             // 
             // btnChung
             // 
