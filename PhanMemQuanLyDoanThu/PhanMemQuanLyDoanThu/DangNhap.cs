@@ -59,7 +59,7 @@ namespace PhanMemQuanLyDoanThu
                 int result = (int)cmd.ExecuteScalar();
                 if (result > 0)
                 {
-                    MessageBox.Show("Đăng nhập thành công");
+                    XtraMessageBox.Show("Đăng nhập thành công");
                     frmMain Child = new frmMain();
                     Child.setButton(true);
                     Child.Show();
@@ -67,7 +67,7 @@ namespace PhanMemQuanLyDoanThu
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại");
+                    XtraMessageBox.Show("Đăng nhập thất bại");
                 }
 
             }
