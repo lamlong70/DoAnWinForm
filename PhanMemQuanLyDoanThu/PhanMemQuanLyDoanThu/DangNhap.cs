@@ -37,17 +37,12 @@ namespace PhanMemQuanLyDoanThu
 
         private void DangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dr;
-            dr = XtraMessageBox.Show("Bạn có muốn thoát không ?", "Thông Báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
+         
         }
         
         private void btnOk_Click(object sender, EventArgs e)
         {
-
+            
             using (SqlConnection sqlCon = new SqlConnection(conString))
             {
                 sqlCon.Open();
@@ -59,11 +54,35 @@ namespace PhanMemQuanLyDoanThu
                 int result = (int)cmd.ExecuteScalar();
                 if (result > 0)
                 {
+<<<<<<< HEAD
+                    DataTable dt = nv.PhanQuyen();
+                    frmMain child = new frmMain();
+
+                    if (dt.Rows[0][0].ToString() == "admin")
+                    {
+                        MessageBox.Show("chào mừng admin:  " + txtTendn.Text);
+                        
+                        child.setButton(true);
+                        child.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("chào mừng nhân viên:  " + txtTendn.Text);
+                        
+                        child.setButton(true);
+                        child.Show();
+                        this.Hide();
+
+                    }
+
+=======
                     XtraMessageBox.Show("Đăng nhập thành công");
                     frmMain Child = new frmMain();
                     Child.setButton(true);
                     Child.Show();
                     this.Hide();
+>>>>>>> 0958b6a8d5f38a7dfc63c7ca8d7edcbfe70df963
                 }
                 else
                 {
@@ -75,9 +94,13 @@ namespace PhanMemQuanLyDoanThu
         
         private void DangNhap_Load(object sender, EventArgs e)
         {
+           
             AcceptButton = btnOk;
         }
 
-      
+        private void DangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

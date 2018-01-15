@@ -20,14 +20,13 @@ namespace PhanMemQuanLyDoanThu
             InitializeComponent();
         }
 
-        public String conString = @"Data Source=TP500LA;Initial Catalog=QUANLYDOANHTHU;Integrated Security=True";
+        public String conString = @"Data Source=.;Initial Catalog=QUANLYDOANHTHU;Integrated Security=True";
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             
-            Close();
-            DangNhap dn = new DangNhap();
-            dn.Show();
+            this.Close();
+           
         }
 
         private void DangKy_FormClosing(object sender, FormClosingEventArgs e)
@@ -37,7 +36,7 @@ namespace PhanMemQuanLyDoanThu
             if (dr == DialogResult.No)
             {
                 e.Cancel = true;
-                
+
             }
         }
 
@@ -62,7 +61,7 @@ namespace PhanMemQuanLyDoanThu
                     MessageBox.Show("Đăng ký thành công");
                     DangNhap dn = new DangNhap();
                     dn.Show();
-                    Hide();
+                    this.Close();
                     Clear();
                 }
             }
@@ -75,6 +74,12 @@ namespace PhanMemQuanLyDoanThu
         private void DangKy_Load(object sender, EventArgs e)
         {
             AcceptButton = btnDangky;
+        }
+
+        private void DangKy_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DangNhap dn = new DangNhap();
+            dn.Show();
         }
     }
 }
