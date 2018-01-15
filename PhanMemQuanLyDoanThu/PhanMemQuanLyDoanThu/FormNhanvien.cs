@@ -123,7 +123,7 @@ namespace PhanMemQuanLyDoanThu
         {
             setButton(true);
         }
-
+        
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string ngaysinh = String.Format("{0:MM/dd/yyyy}", dtpNgaySinh.Value);
