@@ -17,11 +17,11 @@ namespace PhanMemQuanLyDoanThu
     public partial class DangNhap : DevExpress.XtraEditors.XtraForm
     {
         //public String conString = @"Data Source=DANDEPTRAI\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
-<<<<<<< HEAD
-        public String conString = @"Data Source=DANDEPTRAI\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
-=======
-        public String conString = @"Data Source="+SystemInformation.ComputerName+";Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
->>>>>>> 77e21227a0f9166185e7c374b5416fe1f005e9ba
+
+        //public String conString = @"Data Source=DANDEPTRAI\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
+
+        public String conString = @"Data Source="+SystemInformation.ComputerName+ "\\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
+
         NhanVien nv = new NhanVien();
         public DangNhap()
         {
@@ -46,7 +46,7 @@ namespace PhanMemQuanLyDoanThu
             dr = XtraMessageBox.Show("Bạn có muốn thoát không ?", "Thông Báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.No)
             {
-                e.Cancel = true;
+                e.Cancel = true;               
             }
         }
         
@@ -64,11 +64,24 @@ namespace PhanMemQuanLyDoanThu
                 int result = (int)cmd.ExecuteScalar();
                 if (result > 0)
                 {
-                    XtraMessageBox.Show("Đăng nhập thành công");
+                    DataTable dt = nv.PhanQuyen();
                     frmMain Child = new frmMain();
-                    Child.setButton(true);
-                    Child.Show();
-                    this.Hide();
+                    if (dt.Rows[0][0].ToString() == "admin")
+                    {
+                        XtraMessageBox.Show("Xin chào admin: " + txtTendn.Text);
+
+                        Child.setButton(true);
+                        Child.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Xin chào user: " + txtTendn.Text);
+
+                        Child.setButton(true);
+                        Child.Show();
+                        this.Hide();
+                    }
                 }
                 else
                 {
@@ -83,6 +96,5 @@ namespace PhanMemQuanLyDoanThu
             AcceptButton = btnOk;
         }
 
-      
     }
 }

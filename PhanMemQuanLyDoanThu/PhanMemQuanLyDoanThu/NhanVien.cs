@@ -26,8 +26,8 @@ namespace PhanMemQuanLyDoanThu
         public void ThemNhanVien(string tendn, string matkhau)
         {
             //string strSQL = string.Format("Insert Into NHANVIEN  Values(N'{0}',NULL,NULL,NULL,NULL,NULL,NULL,NULL,'{1}','{2}')",tennv,tendn,matkhau);
-
-            string strSQL = string.Format("Insert Into DANGKY  Values('{0}','{1}')", tendn, matkhau);
+            string str = "user";
+            string strSQL = string.Format("Insert Into DANGKY  Values('{0}','{1}','{2}')", tendn, matkhau,str);
 
             db.ExecuteNonQuery(strSQL);
         }
@@ -87,5 +87,12 @@ namespace PhanMemQuanLyDoanThu
             db.ExecuteNonQuery(str);
         }
 
+        public DataTable PhanQuyen()
+        {
+            string strSQL = "Select phanquyen from dangky";
+            DataTable dt = db.Execute(strSQL);
+            return dt;
+            
+        }
     }
 }

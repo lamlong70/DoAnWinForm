@@ -20,7 +20,7 @@ namespace PhanMemQuanLyDoanThu
             InitializeComponent();
         }
 
-        public String conString = @"Data Source=TP500LA;Initial Catalog=QUANLYDOANHTHU;Integrated Security=True";
+        public String conString = @"Data Source="+SystemInformation.ComputerName+ "\\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHU;Integrated Security=True";
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -32,13 +32,13 @@ namespace PhanMemQuanLyDoanThu
 
         private void DangKy_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dr;
-            dr = XtraMessageBox.Show("Bạn có muốn huỷ không ?", "Thông Báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dr == DialogResult.No)
-            {
-                e.Cancel = true;
+            //DialogResult dr;
+            //dr = XtraMessageBox.Show("Bạn có muốn huỷ không ?", "Thông Báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //if (dr == DialogResult.No)
+            //{
+            //    e.Cancel = true;
                 
-            }
+            //}
         }
 
         private void btnDangky_Click(object sender, EventArgs e)
