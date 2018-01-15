@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +16,6 @@ namespace PhanMemQuanLyDoanThu
 {
     public partial class DangNhap : DevExpress.XtraEditors.XtraForm
     {
-        //public String conString = @"Data Source=DANDEPTRAI\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
         public String conString = @"Data Source="+SystemInformation.ComputerName+";Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
         NhanVien nv = new NhanVien();
         public DangNhap()
