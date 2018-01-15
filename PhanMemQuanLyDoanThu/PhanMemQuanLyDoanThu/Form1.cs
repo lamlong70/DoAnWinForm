@@ -64,6 +64,7 @@ namespace PhanMemQuanLyDoanThu
             {
                 e.Cancel = true;
             }
+           
         }
 
         private void btnDangky_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -87,19 +88,25 @@ namespace PhanMemQuanLyDoanThu
                     f.Activate();
                     return;
                 }*/
-            DangNhap dn = new DangNhap();
-            //dn.MdiParent = this;
-            this.Hide();
-            dn.Show();
+          
+            //Không hủy ghi chú của phần này
+
+                DangNhap dn = new DangNhap();
+                //dn.MdiParent = this;
+                this.Hide();
+                dn.Show();
+            
         }
 
         private void btnDangxuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
+            this.Hide();
             setButton(false);
             DangNhap dn = new DangNhap();
-            Hide();
             dn.Show();
-            
+
+
         }
 
         private void lsvDanhSach_SelectedIndexChanged(object sender, EventArgs e)
@@ -127,15 +134,15 @@ namespace PhanMemQuanLyDoanThu
 
         private void btnBophan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            foreach(Form f in this.MdiChildren)
-                if(f.Name=="Bophan")
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "Bophan")
                 {
                     f.Activate();
                     return;
                 }
-                Bophan bp = new Bophan();
-                bp.MdiParent = this;
-                bp.Show();
+            Bophan bp = new Bophan();
+            bp.MdiParent = this;
+            bp.Show();
         }
 
         private void btnKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -214,6 +221,12 @@ namespace PhanMemQuanLyDoanThu
             ChiPhiVatLieu bp = new ChiPhiVatLieu();
             bp.MdiParent = this;
             bp.Show();
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+           
         }
     }
 }
