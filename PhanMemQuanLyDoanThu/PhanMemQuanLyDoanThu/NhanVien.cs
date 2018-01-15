@@ -11,7 +11,7 @@ namespace PhanMemQuanLyDoanThu
     class NhanVien
     {
         Database db;
-        SqlDataReader DRD;
+        //SqlDataReader DRD;
         public NhanVien()
         {
             db = new Database();
