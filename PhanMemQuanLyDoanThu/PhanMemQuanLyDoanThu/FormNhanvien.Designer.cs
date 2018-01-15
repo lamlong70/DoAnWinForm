@@ -35,7 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayLam = new System.Windows.Forms.DateTimePicker();
-            this.cmbGioitinh = new System.Windows.Forms.ComboBox();
+            this.cboGioitinh = new System.Windows.Forms.ComboBox();
             this.txtDienThoai = new System.Windows.Forms.TextBox();
             this.txtDiachi = new System.Windows.Forms.TextBox();
             this.txtHoten = new System.Windows.Forms.TextBox();
@@ -57,12 +57,12 @@
             this.clmDiachi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -77,7 +77,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.dtpNgaySinh);
             this.groupBox1.Controls.Add(this.dtpNgayLam);
-            this.groupBox1.Controls.Add(this.cmbGioitinh);
+            this.groupBox1.Controls.Add(this.cboGioitinh);
             this.groupBox1.Controls.Add(this.txtDienThoai);
             this.groupBox1.Controls.Add(this.txtDiachi);
             this.groupBox1.Controls.Add(this.txtHoten);
@@ -145,16 +145,13 @@
             this.dtpNgayLam.Size = new System.Drawing.Size(200, 23);
             this.dtpNgayLam.TabIndex = 4;
             // 
-            // cmbGioitinh
+            // cboGioitinh
             // 
-            this.cmbGioitinh.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cmbGioitinh.Location = new System.Drawing.Point(466, 73);
-            this.cmbGioitinh.Name = "cmbGioitinh";
-            this.cmbGioitinh.Size = new System.Drawing.Size(157, 24);
-            this.cmbGioitinh.TabIndex = 6;
-            this.cmbGioitinh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbGioitinh_KeyPress);
+            this.cboGioitinh.Location = new System.Drawing.Point(466, 73);
+            this.cboGioitinh.Name = "cboGioitinh";
+            this.cboGioitinh.Size = new System.Drawing.Size(157, 24);
+            this.cboGioitinh.TabIndex = 6;
+            this.cboGioitinh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbGioitinh_KeyPress);
             // 
             // txtDienThoai
             // 
@@ -327,6 +324,17 @@
             this.groupControl1.TabIndex = 8;
             this.groupControl1.Text = "Điều Chỉnh";
             // 
+            // btnHuy
+            // 
+            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuy.Location = new System.Drawing.Point(34, 175);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(96, 31);
+            this.btnHuy.TabIndex = 18;
+            this.btnHuy.Text = "Huỷ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
             // btnLuu
             // 
             this.btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -377,6 +385,15 @@
             this.btnThem.TabIndex = 14;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+
+            this.btnHuy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Location = new System.Drawing.Point(716, 205);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(75, 36);
+            this.btnHuy.TabIndex = 8;
+            this.btnHuy.TabIndex = 13;
+            this.btnHuy.Text = "Huỷ";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // simpleButton1
@@ -387,17 +404,6 @@
             this.simpleButton1.TabIndex = 18;
             this.simpleButton1.Text = "Huỷ";
             this.simpleButton1.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHuy.Location = new System.Drawing.Point(34, 175);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(96, 31);
-            this.btnHuy.TabIndex = 18;
-            this.btnHuy.Text = "Huỷ";
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // FormNhanvien
             // 
@@ -425,7 +431,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cmbGioitinh;
+        private System.Windows.Forms.ComboBox cboGioitinh;
         private System.Windows.Forms.TextBox txtDienThoai;
         private System.Windows.Forms.TextBox txtHoten;
         private System.Windows.Forms.Label label4;

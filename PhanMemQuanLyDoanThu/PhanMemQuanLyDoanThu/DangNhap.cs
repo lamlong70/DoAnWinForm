@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 
 namespace PhanMemQuanLyDoanThu
 {
     public partial class DangNhap : DevExpress.XtraEditors.XtraForm
     {
-        //public String conString = @"Data Source=DANDEPTRAI\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
-        public String conString = @"Data Source=Quan\SQLExpress;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
+        public String conString = @"Data Source="+SystemInformation.ComputerName+";Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
         NhanVien nv = new NhanVien();
         public DangNhap()
         {
@@ -54,6 +54,7 @@ namespace PhanMemQuanLyDoanThu
                 int result = (int)cmd.ExecuteScalar();
                 if (result > 0)
                 {
+<<<<<<< HEAD
                     DataTable dt = nv.PhanQuyen();
                     frmMain child = new frmMain();
 
@@ -75,10 +76,17 @@ namespace PhanMemQuanLyDoanThu
 
                     }
 
+=======
+                    XtraMessageBox.Show("Đăng nhập thành công");
+                    frmMain Child = new frmMain();
+                    Child.setButton(true);
+                    Child.Show();
+                    this.Hide();
+>>>>>>> 0958b6a8d5f38a7dfc63c7ca8d7edcbfe70df963
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại");
+                    XtraMessageBox.Show("Đăng nhập thất bại");
                 }
 
             }

@@ -11,7 +11,7 @@ namespace PhanMemQuanLyDoanThu
     class NhanVien
     {
         Database db;
-        SqlDataReader DRD;
+        //SqlDataReader DRD;
         public NhanVien()
         {
             db = new Database();
@@ -92,5 +92,6 @@ namespace PhanMemQuanLyDoanThu
             string str = string.Format("UPDATE LUONG SET LUONGCOBAN='{0}' WHERE MANV = {1};",luong,manv);
             db.ExecuteNonQuery(str);
         }
+
     }
 }

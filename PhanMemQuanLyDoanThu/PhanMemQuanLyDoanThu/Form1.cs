@@ -223,10 +223,24 @@ namespace PhanMemQuanLyDoanThu
             bp.Show();
         }
 
+<<<<<<< HEAD
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
            
+=======
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "FormKhachHang")
+                {
+                    f.Activate();
+                    return;
+                }
+            FormKhachHang bp = new FormKhachHang();
+            bp.MdiParent = this;
+            bp.Show();
+>>>>>>> 0958b6a8d5f38a7dfc63c7ca8d7edcbfe70df963
         }
     }
 }

@@ -36,7 +36,7 @@ namespace PhanMemQuanLyDoanThu
             dtpNgaySinh.Enabled = !val;
             cboBoPhan.Enabled = !val;
             cboChucVu.Enabled = !val;
-            cmbGioitinh.Enabled = !val;
+            cboGioitinh.Enabled = !val;
             btnThem.Enabled = val;
             btnXoa.Enabled = val;
             btnSua.Enabled = val;
@@ -61,8 +61,8 @@ namespace PhanMemQuanLyDoanThu
 
         void HienGioiTinh()
         {
-            cmbGioitinh.Items.Add("Nam");
-            cmbGioitinh.Items.Add("Nữ");
+            cboGioitinh.Items.Add("Nam");
+            cboGioitinh.Items.Add("Nữ");
         }
         void HienThiNhanVien()
         {
@@ -76,7 +76,7 @@ namespace PhanMemQuanLyDoanThu
                 lvi.SubItems.Add(dt.Rows[i][3].ToString());
                 lvi.SubItems.Add(dt.Rows[i][4].ToString());
                 lvi.SubItems.Add(dt.Rows[i][5].ToString());
-                lvi.SubItems.Add('0'+dt.Rows[i][6].ToString());
+                lvi.SubItems.Add(dt.Rows[i][6].ToString());
                 lvi.SubItems.Add(dt.Rows[i][7].ToString());
                 lvi.SubItems.Add(dt.Rows[i][8].ToString());
             }
@@ -153,13 +153,13 @@ namespace PhanMemQuanLyDoanThu
             string ngaylam = String.Format("{0:MM/dd/yyyy}", dtpNgayLam.Value);
             if (themmoi)
             {
-                nv.ThemNhanVienDS(txtHoten.Text,cboChucVu.SelectedValue.ToString(),cboBoPhan.SelectedValue.ToString(),ngaysinh,ngaylam,txtDienThoai.Text,cmbGioitinh.Text,txtDiachi.Text);
+                nv.ThemNhanVienDS(txtHoten.Text,cboChucVu.SelectedValue.ToString(),cboBoPhan.SelectedValue.ToString(),ngaysinh,ngaylam,txtDienThoai.Text,cboGioitinh.Text,txtDiachi.Text);
                 MessageBox.Show("Thêm mới thành công");
                 setButton(true);
             }
             else
             {
-                nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text, txtHoten.Text, cboChucVu.SelectedValue.ToString(), cboBoPhan.SelectedValue.ToString(), ngaysinh, ngaylam, txtDienThoai.Text, cmbGioitinh.Text, txtDiachi.Text);
+                nv.CapNhatNhanVien(lsvNhanVien.SelectedItems[0].SubItems[0].Text, txtHoten.Text, cboChucVu.SelectedValue.ToString(), cboBoPhan.SelectedValue.ToString(), ngaysinh, ngaylam, txtDienThoai.Text, cboGioitinh.Text, txtDiachi.Text);
                 MessageBox.Show("Cập nhật thành công");
                 setButton(true);
             }
@@ -179,7 +179,7 @@ namespace PhanMemQuanLyDoanThu
                 dtpNgaySinh.Value = DateTime.Parse(lsvNhanVien.SelectedItems[0].SubItems[4].Text);
                 dtpNgayLam.Value = DateTime.Parse(lsvNhanVien.SelectedItems[0].SubItems[5].Text);
                 txtDienThoai.Text = lsvNhanVien.SelectedItems[0].SubItems[6].Text;
-                cmbGioitinh.SelectedItem = cmbGioitinh.FindString(lsvNhanVien.SelectedItems[0].SubItems[7].ToString());
+                cboGioitinh.SelectedIndex = cboGioitinh.FindString(lsvNhanVien.SelectedItems[0].SubItems[7].ToString());
                 txtDiachi.Text = lsvNhanVien.SelectedItems[0].SubItems[8].Text;
                 
                 //Tìm vị trí của Tên bằng cấp trong Combobox

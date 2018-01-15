@@ -479,6 +479,10 @@
             this.barButtonItem9.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.Caption;
             this.barButtonItem9.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+<<<<<<< HEAD
+=======
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
+>>>>>>> 0958b6a8d5f38a7dfc63c7ca8d7edcbfe70df963
             // 
             // ribbonPage1
             // 
