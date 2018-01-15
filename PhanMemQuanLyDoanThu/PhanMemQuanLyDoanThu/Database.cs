@@ -12,20 +12,20 @@ namespace PhanMemQuanLyDoanThu
     {
         string DataBase = "QUANLYDOANHTHUDA";
         //string DataSource = @"DANDEPTRAI\SQLEXPRESS";
-        string DataSource = @"TP500LA";
+        string DataSource = @"DANDEPTRAI\SQLEXPRESS";
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
         public Database()
         {
-<<<<<<< HEAD
+
             string strCnn = @"Data Source="+DataSource+"; Database="+DataBase+";Integrated Security = True";
 
-=======
+
 //            string strCnn = "Data Source=TP500LA; Database=QUANLYDOANHTHUDA;Integrated Security = True";
 
-            string strCnn = @"Data Source="+DataSource+"; Database="+DataBase+";Integrated Security = True";
->>>>>>> 22c18f9e2d1d6ebfb6372248ee2e47b18065cd52
+            
+
             sqlConn = new SqlConnection(strCnn);
         }
         
