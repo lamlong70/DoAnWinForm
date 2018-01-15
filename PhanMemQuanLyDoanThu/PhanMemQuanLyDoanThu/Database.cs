@@ -12,8 +12,8 @@ namespace PhanMemQuanLyDoanThu
     class Database
     {
         string DataBase = "QUANLYDOANHTHUDA";
-        //string DataSource = @"DANDEPTRAI\SQLEXPRESS";
         string DataSource = SystemInformation.ComputerName;
+
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
