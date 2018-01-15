@@ -12,29 +12,14 @@ namespace PhanMemQuanLyDoanThu
     class Database
     {
         string DataBase = "QUANLYDOANHTHUDA";
-        //string DataSource = @"DANDEPTRAI\SQLEXPRESS";
-<<<<<<< HEAD
-        string DataSource = @"DANDEPTRAI\SQLEXPRESS";
-=======
         string DataSource = SystemInformation.ComputerName;
->>>>>>> 77e21227a0f9166185e7c374b5416fe1f005e9ba
+
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
         public Database()
         {
-<<<<<<< HEAD
-
             string strCnn = @"Data Source="+DataSource+"; Database="+DataBase+";Integrated Security = True";
-
-
-//            string strCnn = "Data Source=TP500LA; Database=QUANLYDOANHTHUDA;Integrated Security = True";
-
-            
-
-=======
-            string strCnn = @"Data Source="+DataSource+"; Database="+DataBase+";Integrated Security = True";
->>>>>>> 77e21227a0f9166185e7c374b5416fe1f005e9ba
             sqlConn = new SqlConnection(strCnn);
         }
         
