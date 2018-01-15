@@ -216,7 +216,7 @@ namespace PhanMemQuanLyDoanThu
             bp.Show();
         }
 
-        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnKhachHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             foreach (Form f in this.MdiChildren)
                 if (f.Name == "FormKhachHang")
