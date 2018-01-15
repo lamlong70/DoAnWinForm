@@ -86,5 +86,6 @@ namespace PhanMemQuanLyDoanThu
             string str = string.Format("UPDATE LUONG SET LUONGCOBAN='{0}' WHERE MANV = {1};",luong,manv);
             db.ExecuteNonQuery(str);
         }
+
     }
 }
