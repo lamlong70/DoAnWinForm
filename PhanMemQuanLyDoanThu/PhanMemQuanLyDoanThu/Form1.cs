@@ -64,6 +64,7 @@ namespace PhanMemQuanLyDoanThu
             {
                 e.Cancel = true;
             }
+           
         }
 
         private void btnDangky_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -87,19 +88,25 @@ namespace PhanMemQuanLyDoanThu
                     f.Activate();
                     return;
                 }*/
-            DangNhap dn = new DangNhap();
-            //dn.MdiParent = this;
-            this.Hide();
-            dn.Show();
+          
+            //Không hủy ghi chú của phần này
+
+                DangNhap dn = new DangNhap();
+                //dn.MdiParent = this;
+                this.Hide();
+                dn.Show();
+            
         }
 
         private void btnDangxuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
+            this.Hide();
             setButton(false);
             DangNhap dn = new DangNhap();
-            Hide();
             dn.Show();
-            
+
+
         }
 
         private void lsvDanhSach_SelectedIndexChanged(object sender, EventArgs e)
@@ -127,15 +134,15 @@ namespace PhanMemQuanLyDoanThu
 
         private void btnBophan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            foreach(Form f in this.MdiChildren)
-                if(f.Name=="Bophan")
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "Bophan")
                 {
                     f.Activate();
                     return;
                 }
-                Bophan bp = new Bophan();
-                bp.MdiParent = this;
-                bp.Show();
+            Bophan bp = new Bophan();
+            bp.MdiParent = this;
+            bp.Show();
         }
 
         private void btnKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -216,6 +223,12 @@ namespace PhanMemQuanLyDoanThu
             bp.Show();
         }
 
+<<<<<<< HEAD
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+           
+=======
         private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             foreach (Form f in this.MdiChildren)
@@ -227,6 +240,7 @@ namespace PhanMemQuanLyDoanThu
             FormKhachHang bp = new FormKhachHang();
             bp.MdiParent = this;
             bp.Show();
+>>>>>>> 0958b6a8d5f38a7dfc63c7ca8d7edcbfe70df963
         }
     }
 }

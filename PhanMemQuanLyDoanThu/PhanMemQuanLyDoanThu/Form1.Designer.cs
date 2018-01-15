@@ -99,6 +99,9 @@
             // 
             // ribbonControl1
             // 
+            // 
+            // 
+            // 
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -476,7 +479,10 @@
             this.barButtonItem9.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.Caption;
             this.barButtonItem9.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+<<<<<<< HEAD
+=======
             this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
+>>>>>>> 0958b6a8d5f38a7dfc63c7ca8d7edcbfe70df963
             // 
             // ribbonPage1
             // 
@@ -489,23 +495,16 @@
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnDangKy);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnDangNhap);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnDangxuat);
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnPhanquyen);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Hệ Thống";
             // 
             // ribbonPageGroup4
             // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnSaoluu);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnPhuchoi);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
             this.ribbonPageGroup4.Text = "Dữ Liệu";
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.skinRibbonGalleryBarItem1, true);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Giao Diện";
             // 
@@ -519,17 +518,11 @@
             // 
             // ribbonPageGroup2
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnNhanvien);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnChucvu);
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnBophan);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Quản Lý Hồ Sơ";
             // 
             // ribbonPageGroup7
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.btnBangpc);
-            this.ribbonPageGroup7.ItemLinks.Add(this.btnPhancongnv);
-            this.ribbonPageGroup7.ItemLinks.Add(this.btnPhancong);
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.Text = "Quản Lý Ca";
             // 
@@ -542,11 +535,6 @@
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnLuong);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnVatlieu);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnChung);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnDoanhthu);
-            this.ribbonPageGroup3.ItemLinks.Add(this.btnKhac);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Tài Chính";
             // 
@@ -562,31 +550,21 @@
             // 
             // ribbonPageGroup10
             // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.btnNhacc);
-            this.ribbonPageGroup10.ItemLinks.Add(this.btnDondh);
-            this.ribbonPageGroup10.ItemLinks.Add(this.btnChitiet);
-            this.ribbonPageGroup10.ItemLinks.Add(this.btnDathang);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
             this.ribbonPageGroup10.Text = "Thông Tin Hàng Hoá";
             // 
             // ribbonPageGroup6
             // 
-            this.ribbonPageGroup6.ItemLinks.Add(this.btnPhieunhap);
-            this.ribbonPageGroup6.ItemLinks.Add(this.btnPhieuxuat);
-            this.ribbonPageGroup6.ItemLinks.Add(this.btnXuatkho);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Thông Tin Nhập Kho";
             // 
             // ribbonPageGroup8
             // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.btnKho);
-            this.ribbonPageGroup8.ItemLinks.Add(this.btnQuanlykho);
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Kho";
             // 
             // ribbonPageGroup9
             // 
-            this.ribbonPageGroup9.ItemLinks.Add(this.btnNguyenlieu);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             this.ribbonPageGroup9.Text = "Vật Liệu";
             // 
@@ -600,7 +578,6 @@
             // ribbonPageGroup11
             // 
             this.ribbonPageGroup11.AllowMinimize = false;
-            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem9);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "Thông tin khách hàng";
             // 
@@ -616,22 +593,18 @@
             // 
             // ribbonPageGroup12
             // 
-            this.ribbonPageGroup12.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             // 
             // ribbonPageGroup14
             // 
-            this.ribbonPageGroup14.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup14.Name = "ribbonPageGroup14";
             // 
             // ribbonPageGroup15
             // 
-            this.ribbonPageGroup15.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
             // 
             // ribbonPageGroup16
             // 
-            this.ribbonPageGroup16.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup16.Name = "ribbonPageGroup16";
             // 
             // ribbonPage7
@@ -668,6 +641,7 @@
             this.Text = "Quản Lý Doanh Thu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
