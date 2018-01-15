@@ -11,7 +11,7 @@ namespace PhanMemQuanLyDoanThu
     class SanPham
     {
         Database db;
-        SqlDataReader DRD;
+        //SqlDataReader DRD;
         public SanPham()
         {
             db = new Database();

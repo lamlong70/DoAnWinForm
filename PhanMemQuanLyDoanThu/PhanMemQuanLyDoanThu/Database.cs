@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace PhanMemQuanLyDoanThu
 {
@@ -12,7 +13,7 @@ namespace PhanMemQuanLyDoanThu
     {
         string DataBase = "QUANLYDOANHTHUDA";
         //string DataSource = @"DANDEPTRAI\SQLEXPRESS";
-        string DataSource = @"TP500LA";
+        string DataSource = SystemInformation.ComputerName;
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
