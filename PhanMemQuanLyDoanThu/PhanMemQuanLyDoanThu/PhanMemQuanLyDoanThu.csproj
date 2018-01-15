@@ -58,6 +58,18 @@
     <Compile Include="Bophan.Designer.cs">
       <DependentUpon>Bophan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChiPhiVatLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiPhiVatLieu.Designer.cs">
+      <DependentUpon>ChiPhiVatLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChucVu.Designer.cs">
+      <DependentUpon>ChucVu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,19 @@
     <Compile Include="FormNhanvien.Designer.cs">
       <DependentUpon>FormNhanvien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKhachHang.Designer.cs">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs" />
+    <Compile Include="LuongNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LuongNV.Designer.cs">
+      <DependentUpon>LuongNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +121,12 @@
     <EmbeddedResource Include="Bophan.resx">
       <DependentUpon>Bophan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChiPhiVatLieu.resx">
+      <DependentUpon>ChiPhiVatLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChucVu.resx">
+      <DependentUpon>ChucVu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +138,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhanvien.resx">
       <DependentUpon>FormNhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKhachHang.resx">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuongNV.resx">
+      <DependentUpon>LuongNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 
 namespace PhanMemQuanLyDoanThu
@@ -16,7 +17,11 @@ namespace PhanMemQuanLyDoanThu
     public partial class DangNhap : DevExpress.XtraEditors.XtraForm
     {
         //public String conString = @"Data Source=DANDEPTRAI\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
+<<<<<<< HEAD
         public String conString = @"Data Source=DANDEPTRAI\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
+=======
+        public String conString = @"Data Source="+SystemInformation.ComputerName+";Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
+>>>>>>> 77e21227a0f9166185e7c374b5416fe1f005e9ba
         NhanVien nv = new NhanVien();
         public DangNhap()
         {
@@ -59,7 +64,7 @@ namespace PhanMemQuanLyDoanThu
                 int result = (int)cmd.ExecuteScalar();
                 if (result > 0)
                 {
-                    MessageBox.Show("Đăng nhập thành công");
+                    XtraMessageBox.Show("Đăng nhập thành công");
                     frmMain Child = new frmMain();
                     Child.setButton(true);
                     Child.Show();
@@ -67,7 +72,7 @@ namespace PhanMemQuanLyDoanThu
                 }
                 else
                 {
-                    MessageBox.Show("Đăng nhập thất bại");
+                    XtraMessageBox.Show("Đăng nhập thất bại");
                 }
 
             }

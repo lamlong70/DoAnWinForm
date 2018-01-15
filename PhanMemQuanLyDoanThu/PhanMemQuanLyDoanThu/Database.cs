@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace PhanMemQuanLyDoanThu
 {
@@ -12,12 +13,17 @@ namespace PhanMemQuanLyDoanThu
     {
         string DataBase = "QUANLYDOANHTHUDA";
         //string DataSource = @"DANDEPTRAI\SQLEXPRESS";
+<<<<<<< HEAD
         string DataSource = @"DANDEPTRAI\SQLEXPRESS";
+=======
+        string DataSource = SystemInformation.ComputerName;
+>>>>>>> 77e21227a0f9166185e7c374b5416fe1f005e9ba
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
         SqlDataAdapter da;//Bo dieu phoi du lieu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
         public Database()
         {
+<<<<<<< HEAD
 
             string strCnn = @"Data Source="+DataSource+"; Database="+DataBase+";Integrated Security = True";
 
@@ -26,6 +32,9 @@ namespace PhanMemQuanLyDoanThu
 
             
 
+=======
+            string strCnn = @"Data Source="+DataSource+"; Database="+DataBase+";Integrated Security = True";
+>>>>>>> 77e21227a0f9166185e7c374b5416fe1f005e9ba
             sqlConn = new SqlConnection(strCnn);
         }
         
@@ -53,13 +62,14 @@ namespace PhanMemQuanLyDoanThu
             string sql = "BACKUP DATABASE " + DataBase + " TO DISK = '" + Link + "\\"+DataBase+"-"+DateTime.Now.Ticks.ToString()+".bak'";
             SqlCommand sqlcmd = new SqlCommand(sql, sqlConn);
             sqlcmd.ExecuteNonQuery();
+            //sqlConn.Close();
         }
         public void RestoreDatabase(string link)
         {
             string strCnn = @"Data Source=" + DataSource + "; Database=" + DataBase + ";Integrated Security = True";
             sqlConn = new SqlConnection(strCnn);
             sqlConn.Open();
-            string sql = "ALTER DATABASE "+DataBase+" SET SINGLE_USER WITH ROLLBACK IMMEDIATE; ";
+            string sql = "ALTER DATABASE "+DataBase+ " SET SINGLE_USER WITH ROLLBACK IMMEDIATE; ";
             sql += "USE master; RESTORE DATABASE "+DataBase+" FROM DISK= '"+link+"' WITH REPLACE;";
             SqlCommand sqlcmd = new SqlCommand(sql, sqlConn);
             sqlcmd.ExecuteNonQuery();

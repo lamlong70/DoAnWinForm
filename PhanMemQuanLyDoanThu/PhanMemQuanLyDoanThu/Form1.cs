@@ -176,5 +176,57 @@ namespace PhanMemQuanLyDoanThu
                 MessageBox.Show("Khôi phục thành công","Thành công");
             }
         }
+
+        private void btnLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "LuongNV")
+                {
+                    f.Activate();
+                    return;
+                }
+            LuongNV bp = new LuongNV();
+            bp.MdiParent = this;
+            bp.Show();
+        }
+
+        private void btnChucvu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "ChucVu")
+                {
+                    f.Activate();
+                    return;
+                }
+            ChucVu bp = new ChucVu();
+            bp.MdiParent = this;
+            bp.Show();
+        }
+
+        private void btnVatlieu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "ChiPhiVatLieu")
+                {
+                    f.Activate();
+                    return;
+                }
+            ChiPhiVatLieu bp = new ChiPhiVatLieu();
+            bp.MdiParent = this;
+            bp.Show();
+        }
+
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "FormKhachHang")
+                {
+                    f.Activate();
+                    return;
+                }
+            FormKhachHang bp = new FormKhachHang();
+            bp.MdiParent = this;
+            bp.Show();
+        }
     }
 }
