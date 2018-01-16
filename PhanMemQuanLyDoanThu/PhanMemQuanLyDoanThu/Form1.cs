@@ -228,5 +228,21 @@ namespace PhanMemQuanLyDoanThu
             bp.MdiParent = this;
             bp.Show();
         }
+
+        private void btnNhacc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if(f.Name == "FormNhaCungCap")
+                {
+                    f.Activate();
+                    return;
+                }
+               
+            }
+            FormNhaCungCap ncc = new FormNhaCungCap();
+            ncc.MdiParent = this;
+            ncc.Show();
+        }
     }
 }
