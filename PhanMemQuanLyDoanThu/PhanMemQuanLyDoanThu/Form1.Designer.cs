@@ -348,6 +348,7 @@
             this.btnNhacc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhacc.ImageOptions.Image")));
             this.btnNhacc.Name = "btnNhacc";
             this.btnNhacc.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnNhacc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhacc_ItemClick);
             // 
             // btnDondh
             // 
