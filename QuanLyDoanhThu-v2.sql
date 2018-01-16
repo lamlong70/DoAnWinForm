@@ -126,6 +126,7 @@ FROM sys.master_files
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 alter table sanpham add MANCC int not null
 alter table nhacungcap add diachi nvarchar (50)
 
@@ -135,6 +136,8 @@ create table NHACUNGCAP
 	MANCC int identity (1,1)
 )
 =======
+=======
+>>>>>>> 6353d032648c5a1f672773849acb30d508230956
 =======
 >>>>>>> 6353d032648c5a1f672773849acb30d508230956
 =======
@@ -156,6 +159,10 @@ DROP TABLE CHITIETHOADON
 DROP TABLE HOADON
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+DROP TABLE KHACHHANG
+>>>>>>> 6353d032648c5a1f672773849acb30d508230956
+=======
 DROP TABLE KHACHHANG
 >>>>>>> 6353d032648c5a1f672773849acb30d508230956
 =======
