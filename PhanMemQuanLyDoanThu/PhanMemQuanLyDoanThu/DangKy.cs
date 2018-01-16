@@ -20,7 +20,7 @@ namespace PhanMemQuanLyDoanThu
             InitializeComponent();
         }
 
-        public String conString = @"Data Source=.;Initial Catalog=QUANLYDOANHTHU;Integrated Security=True";
+        public String conString = @"Data Source="+SystemInformation.ComputerName+ "\\SQLExpress;Initial Catalog=QUANLYDOANHTHU;Integrated Security=True";
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -46,10 +46,12 @@ namespace PhanMemQuanLyDoanThu
             {
                 if (txtMatkhau.Text == "" || txtTendn.Text == "")
                     MessageBox.Show("Hãy điền đầy đủ thông tin");
-                else if (txtMatkhau.Text != txtNhaplai.Text)
-                    MessageBox.Show("Mật khẩu không trùng nhau");
                 else
-                {/*
+                {
+                    if (txtMatkhau.Text != txtNhaplai.Text)
+                        MessageBox.Show("Mật khẩu không trùng nhau");
+                    else
+                    {/*
                     sqlCon.Open();
                     SqlCommand sqlCmd = new SqlCommand("ThemNV", sqlCon);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
@@ -57,12 +59,22 @@ namespace PhanMemQuanLyDoanThu
                     sqlCmd.Parameters.AddWithValue("@TenDn", txtTendn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Password", txtMatkhau.Text.Trim());
                     sqlCmd.ExecuteNonQuery();*/
+<<<<<<< HEAD
+                        nv.ThemNhanVien(txtTendn.Text, txtMatkhau.Text);
+                        MessageBox.Show("Đăng ký thành công");
+                        DangNhap dn = new DangNhap();
+                        dn.Show();
+                        this.Close();
+                        Clear();
+                    }
+=======
                     nv.ThemNhanVien(txtTendn.Text, txtMatkhau.Text);
                     MessageBox.Show("Đăng ký thành công");
                     DangNhap dn = new DangNhap();
                     dn.Show();
-                    this.Close();
+                    Hide();
                     Clear();
+>>>>>>> 6353d032648c5a1f672773849acb30d508230956
                 }
             }
         }

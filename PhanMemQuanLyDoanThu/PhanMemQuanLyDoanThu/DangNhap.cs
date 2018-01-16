@@ -16,7 +16,7 @@ namespace PhanMemQuanLyDoanThu
 {
     public partial class DangNhap : DevExpress.XtraEditors.XtraForm
     {
-        public String conString = @"Data Source="+SystemInformation.ComputerName+";Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
+        public String conString = @"Data Source="+SystemInformation.ComputerName+ "\\SQLExpress;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
         NhanVien nv = new NhanVien();
         public DangNhap()
         {
@@ -37,7 +37,13 @@ namespace PhanMemQuanLyDoanThu
 
         private void DangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
-         
+            DialogResult dr;
+            dr = XtraMessageBox.Show("Bạn có muốn huỷ không ?", "Thông Báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.No)
+            {
+                e.Cancel = true;
+
+            }
         }
         
         private void btnOk_Click(object sender, EventArgs e)
