@@ -19,7 +19,11 @@ namespace PhanMemQuanLyDoanThu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
         public Database()
         {
+<<<<<<< HEAD
+            string strCnn = @"Data Source="+DataSource+ "\\SQLExpress ; Database=" + DataBase+";Integrated Security = True";
+=======
             string strCnn = @"Data Source="+DataSource+ "\\SQLExpress; Database=" + DataBase+";Integrated Security = True";
+>>>>>>> 718dcd92c5a44e3e2931603ed23b7ebe32a22796
             sqlConn = new SqlConnection(strCnn);
         }
         
