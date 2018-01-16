@@ -216,7 +216,7 @@ namespace PhanMemQuanLyDoanThu
             bp.Show();
         }
 
-        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnKhachHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             foreach (Form f in this.MdiChildren)
                 if (f.Name == "FormKhachHang")
@@ -229,6 +229,24 @@ namespace PhanMemQuanLyDoanThu
             bp.Show();
         }
 
+<<<<<<< HEAD
      
+=======
+        private void btnNhacc_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+            {
+                if(f.Name == "FormNhaCungCap")
+                {
+                    f.Activate();
+                    return;
+                }
+               
+            }
+            FormNhaCungCap ncc = new FormNhaCungCap();
+            ncc.MdiParent = this;
+            ncc.Show();
+        }
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
     }
 }

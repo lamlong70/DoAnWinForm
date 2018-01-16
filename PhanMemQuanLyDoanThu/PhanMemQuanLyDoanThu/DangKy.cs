@@ -20,18 +20,22 @@ namespace PhanMemQuanLyDoanThu
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         public String conString = @"Data Source="+SystemInformation.ComputerName+ "\\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHU;Integrated Security=True";
+=======
+        public String conString = @"Data Source="+SystemInformation.ComputerName+ "\\SQLExpress;Initial Catalog=QUANLYDOANHTHU;Integrated Security=True";
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             
-            Close();
-            DangNhap dn = new DangNhap();
-            dn.Show();
+            this.Close();
+           
         }
 
         private void DangKy_FormClosing(object sender, FormClosingEventArgs e)
         {
+<<<<<<< HEAD
             //DialogResult dr;
             //dr = XtraMessageBox.Show("Bạn có muốn huỷ không ?", "Thông Báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             //if (dr == DialogResult.No)
@@ -39,6 +43,15 @@ namespace PhanMemQuanLyDoanThu
             //    e.Cancel = true;
                 
             //}
+=======
+            DialogResult dr;
+            dr = XtraMessageBox.Show("Bạn có muốn huỷ không ?", "Thông Báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.No)
+            {
+                e.Cancel = true;
+
+            }
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
         }
 
         private void btnDangky_Click(object sender, EventArgs e)
@@ -47,10 +60,12 @@ namespace PhanMemQuanLyDoanThu
             {
                 if (txtMatkhau.Text == "" || txtTendn.Text == "")
                     MessageBox.Show("Hãy điền đầy đủ thông tin");
-                else if (txtMatkhau.Text != txtNhaplai.Text)
-                    MessageBox.Show("Mật khẩu không trùng nhau");
                 else
-                {/*
+                {
+                    if (txtMatkhau.Text != txtNhaplai.Text)
+                        MessageBox.Show("Mật khẩu không trùng nhau");
+                    else
+                    {/*
                     sqlCon.Open();
                     SqlCommand sqlCmd = new SqlCommand("ThemNV", sqlCon);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
@@ -58,12 +73,22 @@ namespace PhanMemQuanLyDoanThu
                     sqlCmd.Parameters.AddWithValue("@TenDn", txtTendn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Password", txtMatkhau.Text.Trim());
                     sqlCmd.ExecuteNonQuery();*/
+<<<<<<< HEAD
+                        nv.ThemNhanVien(txtTendn.Text, txtMatkhau.Text);
+                        MessageBox.Show("Đăng ký thành công");
+                        DangNhap dn = new DangNhap();
+                        dn.Show();
+                        this.Close();
+                        Clear();
+                    }
+=======
                     nv.ThemNhanVien(txtTendn.Text, txtMatkhau.Text);
                     MessageBox.Show("Đăng ký thành công");
                     DangNhap dn = new DangNhap();
                     dn.Show();
                     Hide();
                     Clear();
+>>>>>>> 6353d032648c5a1f672773849acb30d508230956
                 }
             }
         }
@@ -75,6 +100,12 @@ namespace PhanMemQuanLyDoanThu
         private void DangKy_Load(object sender, EventArgs e)
         {
             AcceptButton = btnDangky;
+        }
+
+        private void DangKy_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DangNhap dn = new DangNhap();
+            dn.Show();
         }
     }
 }

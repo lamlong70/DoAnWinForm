@@ -12,7 +12,10 @@ namespace PhanMemQuanLyDoanThu
     class Database
     {
         string DataBase = "QUANLYDOANHTHUDA";
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
         string DataSource = SystemInformation.ComputerName;
 
         SqlConnection sqlConn; //Doi tuong ket noi CSDL
@@ -20,6 +23,7 @@ namespace PhanMemQuanLyDoanThu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
         public Database()
         {
+<<<<<<< HEAD
 
 
             string strCnn = @"Data Source="+DataSource+"\\SQLEXPRESS; Database=" +DataBase+";Integrated Security = True";
@@ -32,6 +36,9 @@ namespace PhanMemQuanLyDoanThu
 
          
 
+=======
+            string strCnn = @"Data Source="+DataSource+ "\\SQLExpress; Database=" + DataBase+";Integrated Security = True";
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
             sqlConn = new SqlConnection(strCnn);
         }
         
@@ -53,7 +60,11 @@ namespace PhanMemQuanLyDoanThu
         }
         public void BackupDatabase(string Link)
         {
+<<<<<<< HEAD
             string strCnn = @"Data Source=" + DataSource + "\\SQLEXPRESS; Database=" + DataBase + ";Integrated Security = True";
+=======
+            string strCnn = @"Data Source=" + DataSource + "\\SQLExpress; Database=" + DataBase + ";Integrated Security = True";
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
             sqlConn = new SqlConnection(strCnn);
             sqlConn.Open();
             string sql = "BACKUP DATABASE " + DataBase + " TO DISK = '" + Link + "\\"+DataBase+"-"+DateTime.Now.Ticks.ToString()+".bak'";
@@ -63,7 +74,11 @@ namespace PhanMemQuanLyDoanThu
         }
         public void RestoreDatabase(string link)
         {
+<<<<<<< HEAD
             string strCnn = @"Data Source=" + DataSource + "\\SQLEXPRESS; Database=" + DataBase + ";Integrated Security = True";
+=======
+            string strCnn = @"Data Source=" + DataSource + "\\SQLExpress; Database=" + DataBase + ";Integrated Security = True";
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
             sqlConn = new SqlConnection(strCnn);
             sqlConn.Open();
             string sql = "ALTER DATABASE "+DataBase+ " SET SINGLE_USER WITH ROLLBACK IMMEDIATE; ";

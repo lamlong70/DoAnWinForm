@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,12 +16,16 @@ namespace PhanMemQuanLyDoanThu
 {
     public partial class DangNhap : DevExpress.XtraEditors.XtraForm
     {
+<<<<<<< HEAD
         //public String conString = @"Data Source=DANDEPTRAI\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
 
         //public String conString = @"Data Source=DANDEPTRAI\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
 
         public String conString = @"Data Source="+SystemInformation.ComputerName+ "\\SQLEXPRESS;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
 
+=======
+        public String conString = @"Data Source="+SystemInformation.ComputerName+ "\\SQLExpress;Initial Catalog=QUANLYDOANHTHUDA;Integrated Security=True";
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
         NhanVien nv = new NhanVien();
         public DangNhap()
         {
@@ -43,16 +47,21 @@ namespace PhanMemQuanLyDoanThu
         private void DangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dr;
-            dr = XtraMessageBox.Show("Bạn có muốn thoát không ?", "Thông Báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            dr = XtraMessageBox.Show("Bạn có muốn huỷ không ?", "Thông Báo ", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.No)
             {
+<<<<<<< HEAD
                 e.Cancel = true;               
+=======
+                e.Cancel = true;
+
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
             }
         }
         
         private void btnOk_Click(object sender, EventArgs e)
         {
-
+            
             using (SqlConnection sqlCon = new SqlConnection(conString))
             {
                 sqlCon.Open();
@@ -64,7 +73,30 @@ namespace PhanMemQuanLyDoanThu
                 int result = (int)cmd.ExecuteScalar();
                 if (result > 0)
                 {
+<<<<<<< HEAD
                     DataTable dt = nv.PhanQuyen();
+=======
+                    //DataTable dt = nv.PhanQuyen();
+                    frmMain child = new frmMain();
+                    //if (dt.Rows[0][0].ToString() == "admin")
+                    //{
+                    //    MessageBox.Show("chào mừng admin:  " + txtTendn.Text);
+                        
+                    //    child.setButton(true);
+                    //    child.Show();
+                    //    this.Hide();
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("chào mừng nhân viên:  " + txtTendn.Text);
+                        
+                    //    child.setButton(true);
+                    //    child.Show();
+                    //    this.Hide();
+
+                    //}
+                    XtraMessageBox.Show("Đăng nhập thành công");
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
                     frmMain Child = new frmMain();
                     if (dt.Rows[0][0].ToString() == "admin")
                     {
@@ -96,5 +128,12 @@ namespace PhanMemQuanLyDoanThu
             AcceptButton = btnOk;
         }
 
+<<<<<<< HEAD
+=======
+        //private void DangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    Application.Exit();
+        //}
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
     }
 }

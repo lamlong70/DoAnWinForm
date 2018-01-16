@@ -44,7 +44,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMatkhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhaplai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -55,7 +54,6 @@
             this.btnCancel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnCancel.Location = new System.Drawing.Point(350, 238);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -67,7 +65,6 @@
             this.btnDangky.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnDangky.Location = new System.Drawing.Point(228, 238);
             this.btnDangky.Name = "btnDangky";
-            this.btnDangky.Size = new System.Drawing.Size(75, 23);
             this.btnDangky.TabIndex = 5;
             this.btnDangky.Text = "Đăng Ký";
             this.btnDangky.Click += new System.EventHandler(this.btnDangky_Click);
@@ -113,6 +110,9 @@
             // 
             this.txtMatkhau.Location = new System.Drawing.Point(163, 62);
             this.txtMatkhau.Name = "txtMatkhau";
+            // 
+            // 
+            // 
             this.txtMatkhau.Properties.PasswordChar = '*';
             this.txtMatkhau.Size = new System.Drawing.Size(169, 20);
             this.txtMatkhau.TabIndex = 3;
@@ -121,6 +121,9 @@
             // 
             this.txtNhaplai.Location = new System.Drawing.Point(163, 88);
             this.txtNhaplai.Name = "txtNhaplai";
+            // 
+            // 
+            // 
             this.txtNhaplai.Properties.PasswordChar = '*';
             this.txtNhaplai.Size = new System.Drawing.Size(169, 20);
             this.txtNhaplai.TabIndex = 4;
@@ -189,13 +192,12 @@
             this.Name = "DangKy";
             this.Text = "DangKy";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DangKy_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DangKy_FormClosed);
             this.Load += new System.EventHandler(this.DangKy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTendn.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatkhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNhaplai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
             this.ResumeLayout(false);
 
         }

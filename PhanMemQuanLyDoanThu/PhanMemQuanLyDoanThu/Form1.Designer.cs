@@ -69,7 +69,7 @@
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnKhachHang = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -141,7 +141,7 @@
             this.barButtonItem6,
             this.barButtonItem7,
             this.barButtonItem8,
-            this.barButtonItem9});
+            this.btnKhachHang});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 44;
             this.ribbonControl1.Name = "ribbonControl1";
@@ -348,6 +348,7 @@
             this.btnNhacc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhacc.ImageOptions.Image")));
             this.btnNhacc.Name = "btnNhacc";
             this.btnNhacc.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnNhacc.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNhacc_ItemClick);
             // 
             // btnDondh
             // 
@@ -466,17 +467,17 @@
             this.barButtonItem8.Id = 42;
             this.barButtonItem8.Name = "barButtonItem8";
             // 
-            // barButtonItem9
+            // btnKhachHang
             // 
-            this.barButtonItem9.Caption = "Khách hàng";
-            this.barButtonItem9.Id = 43;
-            this.barButtonItem9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.Image")));
-            this.barButtonItem9.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
-            this.barButtonItem9.Name = "barButtonItem9";
-            this.barButtonItem9.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.Caption;
-            this.barButtonItem9.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            this.btnKhachHang.Caption = "Khách hàng";
+            this.btnKhachHang.Id = 43;
+            this.btnKhachHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.ImageOptions.Image")));
+            this.btnKhachHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.ImageOptions.LargeImage")));
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.Caption;
+            this.btnKhachHang.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem9_ItemClick);
+            this.btnKhachHang.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnKhachHang_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -600,7 +601,7 @@
             // ribbonPageGroup11
             // 
             this.ribbonPageGroup11.AllowMinimize = false;
-            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup11.ItemLinks.Add(this.btnKhachHang);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "Thông tin khách hàng";
             // 
@@ -741,7 +742,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem btnKhachHang;
     }
 }
 

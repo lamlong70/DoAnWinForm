@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChiPhiVatLieu));
             this.lsvDanhSachNguyenLieu = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnXem = new DevExpress.XtraEditors.SimpleButton();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cboThang = new System.Windows.Forms.ComboBox();
             this.cboNam = new System.Windows.Forms.ComboBox();
+            this.cboThang = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -56,10 +57,25 @@
             this.lsvDanhSachNguyenLieu.GridLines = true;
             this.lsvDanhSachNguyenLieu.Location = new System.Drawing.Point(23, 29);
             this.lsvDanhSachNguyenLieu.Name = "lsvDanhSachNguyenLieu";
-            this.lsvDanhSachNguyenLieu.Size = new System.Drawing.Size(447, 230);
+            this.lsvDanhSachNguyenLieu.Size = new System.Drawing.Size(426, 249);
             this.lsvDanhSachNguyenLieu.TabIndex = 0;
             this.lsvDanhSachNguyenLieu.UseCompatibleStateImageBehavior = false;
             this.lsvDanhSachNguyenLieu.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên nguyên liệu";
+            this.columnHeader1.Width = 160;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Ngày nhập hàng";
+            this.columnHeader3.Width = 160;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Giá";
+            this.columnHeader2.Width = 160;
             // 
             // groupBox1
             // 
@@ -67,9 +83,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.lsvDanhSachNguyenLieu);
-            this.groupBox1.Location = new System.Drawing.Point(30, 56);
+            this.groupBox1.Location = new System.Drawing.Point(30, 92);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(495, 271);
+            this.groupBox1.Size = new System.Drawing.Size(474, 290);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách nguyên vật liệu";
@@ -77,27 +93,13 @@
             // btnXem
             // 
             this.btnXem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXem.Location = new System.Drawing.Point(415, 12);
+            this.btnXem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXem.ImageOptions.Image")));
+            this.btnXem.Location = new System.Drawing.Point(386, 38);
             this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(110, 36);
+            this.btnXem.Size = new System.Drawing.Size(118, 31);
             this.btnXem.TabIndex = 2;
             this.btnXem.Text = "Xem danh sách";
             this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Tên nguyên liệu";
-            this.columnHeader1.Width = 160;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Giá";
-            this.columnHeader2.Width = 160;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Ngày nhập hàng";
-            this.columnHeader3.Width = 160;
             // 
             // label1
             // 
@@ -116,12 +118,30 @@
             this.groupBox2.Controls.Add(this.cboThang);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(53, 4);
+            this.groupBox2.Location = new System.Drawing.Point(27, 29);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(331, 46);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nhập tháng năm";
+            // 
+            // cboNam
+            // 
+            this.cboNam.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboNam.FormattingEnabled = true;
+            this.cboNam.Location = new System.Drawing.Point(204, 16);
+            this.cboNam.Name = "cboNam";
+            this.cboNam.Size = new System.Drawing.Size(106, 21);
+            this.cboNam.TabIndex = 9;
+            // 
+            // cboThang
+            // 
+            this.cboThang.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboThang.FormattingEnabled = true;
+            this.cboThang.Location = new System.Drawing.Point(65, 15);
+            this.cboThang.Name = "cboThang";
+            this.cboThang.Size = new System.Drawing.Size(74, 21);
+            this.cboThang.TabIndex = 8;
             // 
             // label2
             // 
@@ -133,33 +153,18 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Năm";
             // 
-            // cboThang
-            // 
-            this.cboThang.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cboThang.FormattingEnabled = true;
-            this.cboThang.Location = new System.Drawing.Point(65, 15);
-            this.cboThang.Name = "cboThang";
-            this.cboThang.Size = new System.Drawing.Size(74, 21);
-            this.cboThang.TabIndex = 8;
-            // 
-            // cboNam
-            // 
-            this.cboNam.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cboNam.FormattingEnabled = true;
-            this.cboNam.Location = new System.Drawing.Point(204, 16);
-            this.cboNam.Name = "cboNam";
-            this.cboNam.Size = new System.Drawing.Size(106, 21);
-            this.cboNam.TabIndex = 9;
-            // 
             // ChiPhiVatLieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 339);
+            this.ClientSize = new System.Drawing.Size(544, 394);
             this.Controls.Add(this.btnXem);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ChiPhiVatLieu";
+            this.ShowIcon = false;
             this.Text = "Chi Phí Nguyên Vật Liệu";
             this.Load += new System.EventHandler(this.ChiPhiVatLieu_Load);
             this.groupBox1.ResumeLayout(false);

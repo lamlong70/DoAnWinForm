@@ -33,16 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v17.2" />
-    <Reference Include="DevExpress.Data.v17.2" />
-    <Reference Include="DevExpress.Office.v17.2.Core" />
-    <Reference Include="DevExpress.RichEdit.v17.2.Core" />
-    <Reference Include="DevExpress.RichEdit.v17.2.Export" />
-    <Reference Include="DevExpress.Printing.v17.2.Core" />
-    <Reference Include="DevExpress.Utils.v17.2" />
-    <Reference Include="DevExpress.XtraBars.v17.2" />
-    <Reference Include="DevExpress.Sparkline.v17.2.Core" />
-    <Reference Include="DevExpress.XtraEditors.v17.2" />
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.XtraBars.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -92,12 +89,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNhaCungCap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormNhaCungCap.Designer.cs">
-      <DependentUpon>FormNhaCungCap.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormNhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,7 +108,6 @@
     <Compile Include="LuongNV.Designer.cs">
       <DependentUpon>LuongNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhaCungCap.cs" />
     <Compile Include="NhanVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -146,9 +136,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormNhaCungCap.resx">
-      <DependentUpon>FormNhaCungCap.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormNhanvien.resx">
       <DependentUpon>FormNhanvien.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,7 +154,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="TTsanpham.resx">
       <DependentUpon>TTsanpham.cs</DependentUpon>
@@ -181,12 +167,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\giphy.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\anh-dong-dep-cho-may-tinh %281%29.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

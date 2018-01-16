@@ -376,8 +376,11 @@
             // 
             // btnThem
             // 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -387,7 +390,10 @@
             this.btnThem.TabIndex = 14;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
 
             this.btnHuy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.Location = new System.Drawing.Point(716, 205);
@@ -396,10 +402,14 @@
             this.btnHuy.TabIndex = 8;
             this.btnHuy.TabIndex = 13;
             this.btnHuy.Text = "Huỷ";
+<<<<<<< HEAD
             //this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
 
 
+=======
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // simpleButton1
@@ -410,7 +420,10 @@
             this.simpleButton1.TabIndex = 18;
             this.simpleButton1.Text = "Huỷ";
             this.simpleButton1.Click += new System.EventHandler(this.btnHuy_Click);
+<<<<<<< HEAD
 
+=======
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
             // 
             // FormNhanvien
             // 

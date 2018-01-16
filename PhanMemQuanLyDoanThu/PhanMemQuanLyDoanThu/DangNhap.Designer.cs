@@ -39,7 +39,6 @@
             this.btnOk = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkGhinho.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatkhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTendn.Properties)).BeginInit();
@@ -64,6 +63,9 @@
             // 
             this.chkGhinho.Location = new System.Drawing.Point(319, 111);
             this.chkGhinho.Name = "chkGhinho";
+            // 
+            // 
+            // 
             this.chkGhinho.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkGhinho.Properties.Appearance.Options.UseFont = true;
             this.chkGhinho.Properties.Caption = "Ghi Nhớ Tài Khoản";
@@ -86,6 +88,9 @@
             // 
             this.txtMatkhau.Location = new System.Drawing.Point(163, 63);
             this.txtMatkhau.Name = "txtMatkhau";
+            // 
+            // 
+            // 
             this.txtMatkhau.Properties.PasswordChar = '*';
             this.txtMatkhau.Size = new System.Drawing.Size(169, 20);
             this.txtMatkhau.TabIndex = 2;
@@ -134,7 +139,6 @@
             this.btnOk.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnOk.Location = new System.Drawing.Point(251, 227);
             this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 5;
             this.btnOk.Text = "Đăng nhập";
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
@@ -147,7 +151,6 @@
             this.btnCancel.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnCancel.Location = new System.Drawing.Point(373, 227);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Huỷ";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -163,12 +166,13 @@
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập Hệ Thống";
+<<<<<<< HEAD
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DangNhap_FormClosing);
             
+=======
+>>>>>>> fe60bd8b91d20fd3314a09a7ac62dfba028b02b1
             this.Load += new System.EventHandler(this.DangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chkGhinho.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMatkhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTendn.Properties)).EndInit();
