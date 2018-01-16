@@ -61,7 +61,7 @@ namespace PhanMemQuanLyDoanThu
                     MessageBox.Show("Đăng ký thành công");
                     DangNhap dn = new DangNhap();
                     dn.Show();
-                    this.Close();
+                    Hide();
                     Clear();
                 }
             }
