@@ -20,7 +20,7 @@ namespace PhanMemQuanLyDoanThu
             InitializeComponent();
         }
 
-        public String conString = @"Data Source=.;Initial Catalog=QUANLYDOANHTHU;Integrated Security=True";
+        public String conString = @"Data Source=Quan\\SQLExpress;Initial Catalog=QUANLYDOANHTHU;Integrated Security=True";
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
