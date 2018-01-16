@@ -228,5 +228,7 @@ namespace PhanMemQuanLyDoanThu
             bp.MdiParent = this;
             bp.Show();
         }
+
+     
     }
 }
