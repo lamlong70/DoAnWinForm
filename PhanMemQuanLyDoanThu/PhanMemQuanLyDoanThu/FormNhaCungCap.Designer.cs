@@ -29,24 +29,27 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtMa = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtDiachi = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
+            this.txtMa = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lsvNhaCungCap = new System.Windows.Forms.ListView();
             this.clmnMa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmnTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
-            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.clmnDiachi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDiachi = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtHotline = new System.Windows.Forms.TextBox();
+            this.clmnHotline = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -54,27 +57,34 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtHotline);
             this.groupBox1.Controls.Add(this.txtDiachi);
             this.groupBox1.Controls.Add(this.txtTen);
             this.groupBox1.Controls.Add(this.txtMa);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(303, 128);
+            this.groupBox1.Size = new System.Drawing.Size(303, 153);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
             // 
-            // label1
+            // txtDiachi
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã doanh nghiệp";
+            this.txtDiachi.Location = new System.Drawing.Point(112, 92);
+            this.txtDiachi.Name = "txtDiachi";
+            this.txtDiachi.Size = new System.Drawing.Size(151, 20);
+            this.txtDiachi.TabIndex = 1;
+            // 
+            // txtTen
+            // 
+            this.txtTen.Location = new System.Drawing.Point(112, 57);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(151, 20);
+            this.txtTen.TabIndex = 1;
             // 
             // txtMa
             // 
@@ -83,6 +93,15 @@
             this.txtMa.Name = "txtMa";
             this.txtMa.Size = new System.Drawing.Size(151, 20);
             this.txtMa.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 95);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Địa chỉ";
             // 
             // label2
             // 
@@ -93,12 +112,14 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên doanh nghiệp";
             // 
-            // txtTen
+            // label1
             // 
-            this.txtTen.Location = new System.Drawing.Point(112, 57);
-            this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(151, 20);
-            this.txtTen.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã doanh nghiệp";
             // 
             // groupBox2
             // 
@@ -121,7 +142,8 @@
             this.lsvNhaCungCap.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmnMa,
             this.clmnTen,
-            this.clmnDiachi});
+            this.clmnDiachi,
+            this.clmnHotline});
             this.lsvNhaCungCap.FullRowSelect = true;
             this.lsvNhaCungCap.GridLines = true;
             this.lsvNhaCungCap.Location = new System.Drawing.Point(6, 16);
@@ -141,6 +163,11 @@
             this.clmnTen.Text = "Tên doanh nghiệp";
             this.clmnTen.Width = 150;
             // 
+            // clmnDiachi
+            // 
+            this.clmnDiachi.Text = "Địa chỉ";
+            this.clmnDiachi.Width = 180;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnThoat);
@@ -155,46 +182,6 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(6, 17);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(83, 33);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(6, 56);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(83, 33);
-            this.btnXoa.TabIndex = 0;
-            this.btnXoa.Text = "Xóa";
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(6, 95);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(83, 33);
-            this.btnSua.TabIndex = 0;
-            this.btnSua.Text = "Sửa";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(107, 17);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(83, 33);
-            this.btnLuu.TabIndex = 0;
-            this.btnLuu.Text = "Lưu";
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(107, 56);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(83, 33);
-            this.btnHuy.TabIndex = 0;
-            this.btnHuy.Text = "Hủy";
-            // 
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(107, 95);
@@ -204,26 +191,71 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // clmnDiachi
+            // btnSua
             // 
-            this.clmnDiachi.Text = "Địa chỉ";
-            this.clmnDiachi.Width = 180;
+            this.btnSua.Location = new System.Drawing.Point(6, 95);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(83, 33);
+            this.btnSua.TabIndex = 0;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // label3
+            // btnHuy
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 95);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Địa chỉ";
+            this.btnHuy.Location = new System.Drawing.Point(107, 56);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(83, 33);
+            this.btnHuy.TabIndex = 0;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // txtDiachi
+            // btnLuu
             // 
-            this.txtDiachi.Location = new System.Drawing.Point(112, 92);
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(151, 20);
-            this.txtDiachi.TabIndex = 1;
+            this.btnLuu.Location = new System.Drawing.Point(107, 17);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(83, 33);
+            this.btnLuu.TabIndex = 0;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(6, 56);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(83, 33);
+            this.btnXoa.TabIndex = 0;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(6, 17);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(83, 33);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 127);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Hotline";
+            // 
+            // txtHotline
+            // 
+            this.txtHotline.Location = new System.Drawing.Point(112, 124);
+            this.txtHotline.Name = "txtHotline";
+            this.txtHotline.Size = new System.Drawing.Size(151, 20);
+            this.txtHotline.TabIndex = 1;
+            // 
+            // clmnHotline
+            // 
+            this.clmnHotline.Text = "Hotline";
+            this.clmnHotline.Width = 100;
             // 
             // FormNhaCungCap
             // 
@@ -266,5 +298,8 @@
         private System.Windows.Forms.ColumnHeader clmnDiachi;
         private System.Windows.Forms.TextBox txtDiachi;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtHotline;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ColumnHeader clmnHotline;
     }
 }
