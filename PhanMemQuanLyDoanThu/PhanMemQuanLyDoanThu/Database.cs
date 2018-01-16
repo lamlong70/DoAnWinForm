@@ -19,7 +19,11 @@ namespace PhanMemQuanLyDoanThu
         DataSet ds; //Doi tuong chhua CSDL khi giao tiep
         public Database()
         {
+<<<<<<< HEAD
             string strCnn = @"Data Source="+DataSource+ "\\SQLExpress ; Database=" + DataBase+";Integrated Security = True";
+=======
+            string strCnn = @"Data Source="+DataSource+ "\\SQLExpress; Database=" + DataBase+";Integrated Security = True";
+>>>>>>> 718dcd92c5a44e3e2931603ed23b7ebe32a22796
             sqlConn = new SqlConnection(strCnn);
         }
         
@@ -41,7 +45,7 @@ namespace PhanMemQuanLyDoanThu
         }
         public void BackupDatabase(string Link)
         {
-            string strCnn = @"Data Source=" + DataSource + "; Database=" + DataBase + ";Integrated Security = True";
+            string strCnn = @"Data Source=" + DataSource + "\\SQLExpress; Database=" + DataBase + ";Integrated Security = True";
             sqlConn = new SqlConnection(strCnn);
             sqlConn.Open();
             string sql = "BACKUP DATABASE " + DataBase + " TO DISK = '" + Link + "\\"+DataBase+"-"+DateTime.Now.Ticks.ToString()+".bak'";
@@ -51,7 +55,7 @@ namespace PhanMemQuanLyDoanThu
         }
         public void RestoreDatabase(string link)
         {
-            string strCnn = @"Data Source=" + DataSource + "; Database=" + DataBase + ";Integrated Security = True";
+            string strCnn = @"Data Source=" + DataSource + "\\SQLExpress; Database=" + DataBase + ";Integrated Security = True";
             sqlConn = new SqlConnection(strCnn);
             sqlConn.Open();
             string sql = "ALTER DATABASE "+DataBase+ " SET SINGLE_USER WITH ROLLBACK IMMEDIATE; ";

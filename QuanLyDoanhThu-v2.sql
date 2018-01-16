@@ -123,6 +123,25 @@ ALTER DATABASE QUANLYDOANHTHUDA SET MULTI_USER;
 SELECT name, physical_name AS current_file_location
 FROM sys.master_files
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+alter table sanpham add MANCC int not null
+alter table nhacungcap add diachi nvarchar (50)
+
+create table NHACUNGCAP
+(
+	TENNCC nvarchar (30) not null,
+	MANCC int identity (1,1)
+)
+=======
+=======
+>>>>>>> 6353d032648c5a1f672773849acb30d508230956
+=======
+>>>>>>> 6353d032648c5a1f672773849acb30d508230956
+=======
+>>>>>>> 6353d032648c5a1f672773849acb30d508230956
 ALTER TABLE DANGKY ADD PHANQUYEN varchar(6) 
 
 SELECT * FROM KHACHHANG
@@ -138,4 +157,17 @@ ALTER COLUMN SODT NCHAR(12)
 
 DROP TABLE CHITIETHOADON
 DROP TABLE HOADON
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 DROP TABLE KHACHHANG
+>>>>>>> 6353d032648c5a1f672773849acb30d508230956
+=======
+DROP TABLE KHACHHANG
+>>>>>>> 6353d032648c5a1f672773849acb30d508230956
+=======
+DROP TABLE KHACHHANG
+>>>>>>> 6353d032648c5a1f672773849acb30d508230956
+=======
+DROP TABLE KHACHHANG
+>>>>>>> 6353d032648c5a1f672773849acb30d508230956
