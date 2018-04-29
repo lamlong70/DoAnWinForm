@@ -33,16 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.BonusSkins.v17.1" />
-    <Reference Include="DevExpress.Data.v17.1" />
-    <Reference Include="DevExpress.Office.v17.1.Core" />
-    <Reference Include="DevExpress.RichEdit.v17.1.Core" />
-    <Reference Include="DevExpress.RichEdit.v17.1.Export" />
-    <Reference Include="DevExpress.Printing.v17.1.Core" />
-    <Reference Include="DevExpress.Utils.v17.1" />
-    <Reference Include="DevExpress.XtraBars.v17.1" />
-    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
-    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.BonusSkins.v17.2" />
+    <Reference Include="DevExpress.Data.v17.2" />
+    <Reference Include="DevExpress.Office.v17.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Export" />
+    <Reference Include="DevExpress.Printing.v17.2.Core" />
+    <Reference Include="DevExpress.Utils.v17.2" />
+    <Reference Include="DevExpress.XtraBars.v17.2" />
+    <Reference Include="DevExpress.Sparkline.v17.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v17.2" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,7 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bophan.cs" />
+    <Compile Include="Bophan.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Bophan.Designer.cs">
       <DependentUpon>Bophan.cs</DependentUpon>
     </Compile>
@@ -71,16 +73,22 @@
     <Compile Include="ChucVu.Designer.cs">
       <DependentUpon>ChucVu.cs</DependentUpon>
     </Compile>
-    <Compile Include="DangKy.cs" />
+    <Compile Include="DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DangKy.Designer.cs">
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="DangNhap.cs" />
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
-    <Compile Include="Form1.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
@@ -90,7 +98,9 @@
     <Compile Include="FormNhaCungCap.Designer.cs">
       <DependentUpon>FormNhaCungCap.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNhanvien.cs" />
+    <Compile Include="FormNhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormNhanvien.Designer.cs">
       <DependentUpon>FormNhanvien.cs</DependentUpon>
     </Compile>
@@ -112,7 +122,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SanPham.cs" />
-    <Compile Include="TTsanpham.cs" />
+    <Compile Include="TTsanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TTsanpham.Designer.cs">
       <DependentUpon>TTsanpham.cs</DependentUpon>
     </Compile>
@@ -146,6 +158,7 @@
     <EmbeddedResource Include="LuongNV.resx">
       <DependentUpon>LuongNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
